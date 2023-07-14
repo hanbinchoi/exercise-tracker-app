@@ -1,70 +1,49 @@
-# Getting Started with Create React App
+<br>
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+## **Project. Exercise Tracker**
+>**[코드스테이츠 FE 45기] 스터디_빈.진.우(beenzinoo)** <br>
+>**개발기간 : 2023.7.17 ~ 2023.08.5**
 
-## Available Scripts
+<br>
 
-In the project directory, you can run:
+## 프로젝트팀 소개
+|<center>윤 예빈</center>|<center>이 인우</center>|<center>김 진현</center>|<center>최 한빈</center>|<center>진 종환</center>|
+|---|---|---|---|---|
+|<img width="150px" height="150px" src =  "public/images/Yebin.jpg">|<img width="150px" height="150px" src = "public/images/Inwoo.jpg">|<img width="150px" height="150px" src = "public/images/Jinhyeon.jpg">|<img width="150px" height="150px" src = "public/images/Hanbin.jpg">|<img width="150px" height="150px" src = "">|
+|<center>[@YebinYun](https://github.com/YebinYun)</center>|<center>[@dpftlel21](https://github.com/dpftlel21)</center>|<center>[@RunnerJinHyeon](https://github.com/RunnerJinHyeon)</center>|<center>[@hanbinchoi](https://github.com/hanbinchoi)</center>|<center>[@JongHwan](https://github.com/JongHwan)</center>|
 
-### `npm start`
+<br>
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+## 프로젝트 소개
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+<br>
 
-### `npm test`
+## 주요 기능
+### 기능, 제공, 정보 등등
+- 💪
+- 💪
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+### 기능, 제공, 정보 등등
+- 💪
+- 💪
 
-### `npm run build`
+### 기능, 제공, 정보 등등
+- 💪
+- 💪
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+<br>
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+## **Stack**
+### **Environment**
+<img src="https://img.shields.io/badge/visual studio code-007ACC?style=flat&logo=visualstudiocode&logoColor=white"/> <img src="https://img.shields.io/badge/git-F05032?style=flat&logo=git&logoColor=white"/> <img src="https://img.shields.io/badge/git hub-181717?style=flat&logo=github&logoColor=white"/>
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+### **Confing**
+<img src="https://img.shields.io/badge/npm-CB3837?style=flat&logo=npm&logoColor=white"/>
 
-### `npm run eject`
+### **Divelopment**
+<img src="https://img.shields.io/badge/JavaScript-F7DF1E?style=flat&logo=JavaScript&logoColor=white"/> <img src="https://img.shields.io/badge/styled components-DB7093?style=flat&logo=styledcomponents&logoColor=white"/> <img src="https://img.shields.io/badge/react router-CA4245?style=flat&logo=reactrouter&logoColor=white"/>
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+<br>
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
-
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+## 아키텍쳐
+### 디렉토리 구조
