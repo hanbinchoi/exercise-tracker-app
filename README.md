@@ -9,7 +9,7 @@
 ## 프로젝트팀 소개
 |<center>윤 예빈</center>|<center>이 인우</center>|<center>김 진현</center>|<center>최 한빈</center>|<center>진 종환</center>|
 |---|---|---|---|---|
-|<img width="150px" height="150px" src =  "public/images/Yebin.jpg">|<img width="150px" height="150px" src = "public/images/Inwoo.jpg">|<img width="150px" height="150px" src = "public/images/Jinhyeon.jpg">|<img width="150px" height="150px" src = "public/images/Hanbin.jpg">|<img width="150px" height="150px" src = "">|
+|<img width="150px" height="150px" src =  "public/images/Yebin.jpg">|<img width="150px" height="150px" src = "public/images/Inwoo.jpg">|<img width="150px" height="150px" src = "public/images/Jinhyeon.jpg">|<img width="150px" height="150px" src = "public/images/Hanbin.jpg">|<img width="150px" height="150px" src = "public/images/Jonghwan.png">|
 |<center>[@YebinYun](https://github.com/YebinYun)</center>|<center>[@dpftlel21](https://github.com/dpftlel21)</center>|<center>[@RunnerJinHyeon](https://github.com/RunnerJinHyeon)</center>|<center>[@hanbinchoi](https://github.com/hanbinchoi)</center>|<center>[@JongHwan](https://github.com/JongHwan)</center>|
 
 <br>
@@ -37,7 +37,7 @@
 ### **Environment**
 <img src="https://img.shields.io/badge/visual studio code-007ACC?style=flat&logo=visualstudiocode&logoColor=white"/> <img src="https://img.shields.io/badge/git-F05032?style=flat&logo=git&logoColor=white"/> <img src="https://img.shields.io/badge/git hub-181717?style=flat&logo=github&logoColor=white"/>
 
-### **Confing**
+### **Config**
 <img src="https://img.shields.io/badge/npm-CB3837?style=flat&logo=npm&logoColor=white"/>
 
 ### **Divelopment**
