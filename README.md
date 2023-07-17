@@ -10,7 +10,7 @@
 |<center>윤 예빈</center>|<center>이 인우</center>|<center>김 진현</center>|<center>최 한빈</center>|<center>진 종환</center>|
 |---|---|---|---|---|
 |<img width="150px" height="150px" src =  "public/images/Yebin.jpg">|<img width="150px" height="150px" src = "public/images/Inwoo.jpg">|<img width="150px" height="150px" src = "public/images/Jinhyeon.jpg">|<img width="150px" height="150px" src = "public/images/Hanbin.jpg">|<img width="150px" height="150px" src = "public/images/Jonghwan.png">|
-|<center>[@YebinYun](https://github.com/YebinYun)</center>|<center>[@dpftlel21](https://github.com/dpftlel21)</center>|<center>[@RunnerJinHyeon](https://github.com/RunnerJinHyeon)</center>|<center>[@hanbinchoi](https://github.com/hanbinchoi)</center>|<center>[@JongHwan](https://github.com/JongHwan)</center>|
+|<center>[@YebinYun](https://github.com/YebinYun)</center>|<center>[@dpftlel21](https://github.com/dpftlel21)</center>|<center>[@RunnerJinHyeon](https://github.com/RunnerJinHyeon)</center>|<center>[@hanbinchoi](https://github.com/hanbinchoi)</center>|<center>[@MSbtff](https://github.com/MSbtff)</center>|
 
 <br>
 
@@ -40,8 +40,8 @@
 ### **Config**
 <img src="https://img.shields.io/badge/npm-CB3837?style=flat&logo=npm&logoColor=white"/>
 
-### **Divelopment**
-<img src="https://img.shields.io/badge/JavaScript-F7DF1E?style=flat&logo=JavaScript&logoColor=white"/> <img src="https://img.shields.io/badge/styled components-DB7093?style=flat&logo=styledcomponents&logoColor=white"/> <img src="https://img.shields.io/badge/react router-CA4245?style=flat&logo=reactrouter&logoColor=white"/>
+### **Development**
+<img src="https://img.shields.io/badge/JavaScript-F7DF1E?style=flat&logo=JavaScript&logoColor=white"/> <img src="https://img.shields.io/badge/Tailwind CSS-06B6D4?style=flat&logo=Tailwind CSS&logoColor=white"/> <img src="https://img.shields.io/badge/redux-764ABC?style=flat&logo=redux&logoColor=white"/> <img src="https://img.shields.io/badge/react router-CA4245?style=flat&logo=reactrouter&logoColor=white"/>
 
 <br>
 

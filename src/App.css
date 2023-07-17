@@ -1,0 +1,26 @@
+@charset 'utf-8';
+/* 서체 */
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans:wght@100;200;300;400;500;600;700;800;900&display=swap');
+/* reset */
+html,body{position: relative; height: 100%;}
+html{scroll-behavior: smooth;}
+body {
+  font-size: 14px;
+  line-height: 1.5;
+  letter-spacing: -0.3px;
+  background: none repeat scroll 0 0 #fff;
+  font-weight: 400;
+  color: #212121;
+}
+h1, h2, h3, h4, h5, h6 {font-size:1em;}
+/* h1, h2, h3, h4, h5, h6, body, div, p, dl, dt, dd, ul, ol, li, form, fieldset, blockquote, address, table, thead, tbody, tfoot, tr, td, caption {margin:0; padding:0;} */
+li {list-style:none;}
+a {text-decoration: none;}
+a:link{color: #ffffff; text-decoration: none;}
+a:visited{color: #ffffff; text-decoration: none;}
+a:hover{color: #ffffff; text-decoration: none;}
+*{
+  box-sizing :border-box;
+  padding: 0;
+  margin: 0;
+}
