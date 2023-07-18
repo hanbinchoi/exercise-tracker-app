@@ -2,8 +2,14 @@ import './App.css';
 import { Routes, Route } from 'react-router-dom';
 import Header from './components/Header';
 import Footer from './components/footer';
-import Start from './components/Start';
-
+import Start from './pages/Start';
+import Login from './pages/Login';
+import Main from './pages/Main';
+import Record from './pages/Record';
+import MapSearch from './pages/MapSearch';
+import ExerciseList from './pages/ExerciseList';
+import Calendar from './pages/Calendar';
+import Settings from './pages/Settings';
 
 function App() {
   return (
@@ -17,7 +23,7 @@ function App() {
         <Route path='/MapSearch' element={<MapSearch />}></Route>
         <Route path='/ExerciseList' element={<ExerciseList />}></Route>
         <Route path='/Calendar' element={<Calendar />}></Route>
-        <Route path='/Setting' element={<Setting />}></Route>
+        <Route path='/Settings' element={<Settings />}></Route>
       </Routes>
       <Footer />
     </>
