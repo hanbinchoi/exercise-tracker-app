@@ -1,11 +1,12 @@
+// 내 정보 보기
+
 import React from "react";
 
-const Header = () => {
+const MyInfo = () => {
     return (
         <>
-            안녕하세요
         </>
     )
 };
 
-export default Header;
+export default MyInfo;

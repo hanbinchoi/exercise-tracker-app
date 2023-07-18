@@ -10,6 +10,7 @@ import MapSearch from './pages/MapSearch';
 import ExerciseList from './pages/ExerciseList';
 import Calendar from './pages/Calendar';
 import Settings from './pages/Settings';
+import MyInfo from './pages/MyInfo';
 
 function App() {
   return (
@@ -23,6 +24,7 @@ function App() {
         <Route path='/MapSearch' element={<MapSearch />}></Route>
         <Route path='/ExerciseList' element={<ExerciseList />}></Route>
         <Route path='/Calendar' element={<Calendar />}></Route>
+        <Route path='/MyInfo' element={<MyInfo />}></Route>
         <Route path='/Settings' element={<Settings />}></Route>
       </Routes>
       <Footer />

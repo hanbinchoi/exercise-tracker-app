@@ -8,7 +8,7 @@ body {
   font-size: 14px;
   line-height: 1.5;
   letter-spacing: -0.3px;
-  background: none repeat scroll 0 0 #fff;
+  background: none repeat scrol l 0 0 #fff;
   font-weight: 400;
   color: #212121;
 }
@@ -23,4 +23,5 @@ a:hover{color: #ffffff; text-decoration: none;}
   box-sizing :border-box;
   padding: 0;
   margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, "Apple SD Gothic Neo", "Pretendard Variable", Pretendard, Roboto, "Noto Sans KR", "Segoe UI", "Malgun Gothic", "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", sans-serif;
 }
