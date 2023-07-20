@@ -1,4 +1,4 @@
-// 운동 기록 창
+// 운동종류 보여주기 창
 
 import React from "react";
 

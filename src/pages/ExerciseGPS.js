@@ -1,11 +1,12 @@
+// GPS 창
+
 import React from "react";
 
-const Header = () => {
+const ExerciseGPS = () => {
     return (
         <>
-
         </>
     )
 };
 
-export default Header;
+export default ExerciseGPS;

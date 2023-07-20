@@ -1,11 +1,12 @@
+// 운동 입력 창
+
 import React from "react";
 
-const Header = () => {
+const ToRecord = () => {
     return (
         <>
-
         </>
     )
 };
 
-export default Header;
+export default ToRecord;

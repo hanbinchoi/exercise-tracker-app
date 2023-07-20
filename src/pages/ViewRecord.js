@@ -1,12 +1,12 @@
-// 운동 입력 창
+// 운동 보기 창
 
 import React from "react";
 
-const Record = () => {
+const ViewRecord = () => {
     return (
         <>
         </>
     )
 };
 
-export default Record;
+export default ViewRecord;
