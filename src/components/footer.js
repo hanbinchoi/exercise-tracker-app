@@ -5,3 +5,10 @@ const Footer = () => {
 };
 
 export default Footer;
+    return (
+        <>
+        </>
+    )
+};
+
+export default Footer;
