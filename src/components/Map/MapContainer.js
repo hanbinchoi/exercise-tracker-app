@@ -1,11 +1,11 @@
-import React, {useEffect} from 'react';
+import React, { useEffect } from "react";
 
-const {kakao} = window;
+const { kakao } = window;
 
-const MapContainer = ({searchPlace}) => {
+const MapContainer = ({ searchPlace }) => {
   useEffect(() => {
-    let infowindow = new kakao.maps.InfoWindow({zIndex: 1});
-    const container = document.getElementById('myMap');
+    let infowindow = new kakao.maps.InfoWindow({ zIndex: 1 });
+    const container = document.getElementById("myMap");
     const options = {
       center: new kakao.maps.LatLng(33.450701, 126.570667),
       level: 3,
@@ -36,12 +36,12 @@ const MapContainer = ({searchPlace}) => {
       });
 
       // 마커에 클릭이벤트를 등록합니다
-      kakao.maps.event.addListener(marker, 'click', function () {
+      kakao.maps.event.addListener(marker, "click", function () {
         // 마커를 클릭하면 장소명이 인포윈도우에 표출됩니다
         infowindow.setContent(
           '<div style="padding:5px;font-size:12px;">' +
             place.place_name +
-            '</div>'
+            "</div>"
         );
         infowindow.open(map, marker);
       });
@@ -52,8 +52,8 @@ const MapContainer = ({searchPlace}) => {
     <div
       id="myMap"
       style={{
-        width: '500px',
-        height: '500px',
+        width: "500px",
+        height: "500px",
       }}
     ></div>
   );
