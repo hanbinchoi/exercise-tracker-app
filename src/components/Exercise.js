@@ -1,6 +1,8 @@
+// 운동리스트 받아오는 API
+
 import axios from 'axios';
 import React from 'react';
-import {useEffect, useState} from 'react';
+import { useEffect, useState } from 'react';
 
 function Exercise() {
   const [ExerciseData, setExerciseData] = useState([]);

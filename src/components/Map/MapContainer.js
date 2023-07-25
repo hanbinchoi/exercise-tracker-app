@@ -1,10 +1,12 @@
-import React, {useEffect} from 'react';
+// 카카오 지도 받아오기
 
-const {kakao} = window;
+import React, { useEffect } from 'react';
 
-const MapContainer = ({searchPlace}) => {
+const { kakao } = window;
+
+const MapContainer = ({ searchPlace }) => {
   useEffect(() => {
-    let infowindow = new kakao.maps.InfoWindow({zIndex: 1});
+    let infowindow = new kakao.maps.InfoWindow({ zIndex: 1 });
     const container = document.getElementById('myMap');
     const options = {
       center: new kakao.maps.LatLng(33.450701, 126.570667),
@@ -40,8 +42,8 @@ const MapContainer = ({searchPlace}) => {
         // 마커를 클릭하면 장소명이 인포윈도우에 표출됩니다
         infowindow.setContent(
           '<div style="padding:5px;font-size:12px;">' +
-            place.place_name +
-            '</div>'
+          place.place_name +
+          '</div>'
         );
         infowindow.open(map, marker);
       });
