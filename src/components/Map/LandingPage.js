@@ -1,4 +1,6 @@
-import React, {useState} from 'react';
+// 헬스장 위치 검색
+
+import React, { useState } from 'react';
 import MapContainer from './MapContainer';
 
 function LandingPage() {
