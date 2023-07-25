@@ -1,0 +1,19 @@
+.input-container {
+  display: flex;
+  justify-content: space-between;
+}
+.exerciselist-btn {
+  background: none;
+  border: none;
+  color: #777777;
+}
+.submit-btn {
+  border: none;
+  background: rgba(1, 1, 1, 0.5);
+  color: white;
+  padding: 5px 10px;
+  border-radius: 5px;
+}
+svg {
+  font-size: 16px;
+}

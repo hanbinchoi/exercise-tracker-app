@@ -1,64 +1,52 @@
 // 운동 기록 (ver. 캘린더)
 import React, { useState } from "react";
 import CalendarLib from "react-calendar";
-import "react-calendar/dist/Calendar.css"; // css import
+// import "react-calendar/dist/Calendar.css"; // css import
 import moment from "moment";
-import { useDispatch, useSelector } from "react-redux";
-import { addExercise, deleteExercise } from "../redux/exerciseSlice";
-
+import { useSelector } from "react-redux";
+import "./CalendarStyle.css";
+import ExerciseInputForm from "../components/ExerciseInputForm";
+import ExerciseListView from "../components/ExerciseListView";
 const Calendar = () => {
   // value = 선택한 날짜 / onChange = 날짜 변경 함수
   const [date, setDate] = useState(moment(new Date()).format("YYYY-MM-DD"));
-  const exercise = useSelector((state) => state.exercise.value);
-  const dispatch = useDispatch();
-  const [value, setValue] = useState("");
-  // 추후 css 작업시 마크할 날짜들 (운동을 추가한 날짜들의 배열)
-  // const mark = [...new Set(exercise.map((ele) => ele.date))];
+  const data = useSelector((state) => state.exercise.value);
+
+  // 운동을 추가한 날짜들
+  const mark = [...new Set(data.map((ele) => ele.date))];
 
   const onDateChange = (date) => {
     setDate(moment(date).format("YYYY-MM-DD"));
   };
 
-  const handleInputChange = (e) => {
-    setValue(e.target.value);
-  };
-  const handleSubmit = (e) => {
-    e.preventDefault();
-    dispatch(
-      addExercise({
-        // id를 uuid로 바꿀지 생각중...
-        id: new Date().getTime() + Math.random(),
-        date,
-        exercise: value,
-      })
-    );
-    setValue("");
-  };
-  console.log(exercise);
   return (
-    <>
+    <div className="container">
+      <ExerciseInputForm date={date} />
       {/* 캘린더 라이브러리 */}
-      <CalendarLib onChange={(d) => onDateChange(d)} value={date} />
-      <form onSubmit={handleSubmit}>
-        <input
-          type="text"
-          onChange={(e) => handleInputChange(e)}
-          value={value}
+      <div className="calendar-container">
+        {" "}
+        <CalendarLib
+          // 달 이동 화살표
+          nextLabel={null}
+          prevLabel={null}
+          next2Label={null}
+          prev2Label={null}
+          // 일에 숫자만 들어가기
+          formatDay={(locale, date) =>
+            date.toLocaleString("en", { day: "numeric" })
+          }
+          // 값이 변경 될 때 호출되는 함수
+          onChange={(d) => onDateChange(d)}
+          value={date}
+          tileClassName={({ date, view }) => {
+            if (mark.find((x) => x === moment(date).format("YYYY-MM-DD"))) {
+              return "highlight";
+            }
+          }}
         />
-        <button>추가</button>
-      </form>
-      <ul>{date}</ul>
-      {exercise
-        .filter((ele) => ele.date === date)
-        .map((ele) => (
-          <li key={ele.id}>
-            {ele.exercise}
-            <button onClick={() => dispatch(deleteExercise(ele.id))}>
-              삭제
-            </button>
-          </li>
-        ))}
-    </>
+      </div>
+      <ExerciseListView date={date} />
+    </div>
   );
 };
 
