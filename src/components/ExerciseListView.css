@@ -1,0 +1,33 @@
+/* todo 제목 css */
+.todo {
+  font-size: 20px;
+  font-weight: bold;
+  color: #00a651;
+  text-shadow: 5px 1px 4px rgba(0, 0, 0, 0.25);
+  -webkit-text-stroke: 1px #777777;
+  margin-bottom: 5px;
+}
+
+/* 운동 리스트 컨테이너 */
+.exercise-container {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 15px;
+}
+
+.exercise-container li {
+  height: 60px;
+  font-size: 15px;
+  border-radius: 5px;
+  padding: 0 15px;
+  box-shadow: 4px 4px 4px rgba(0, 0, 0, 0.25);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  color: #777777;
+}
+
+li > button {
+  border: none;
+  background: none;
+}
