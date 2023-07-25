@@ -4,11 +4,7 @@ import { Link } from 'react-router-dom';
 
 const Login = () => {
     return (
-        <main
-            style={{
-                width: '360px',
-                height: '800px'
-            }}>
+        <main className="w-80 h-[800px] bg-[#FDF6E6] relative top-0 left-0 z-0">
             <div>
                 <h1>로그인</h1>
                 <div
