@@ -11,11 +11,15 @@ import ExerciseList from './pages/ExerciseList';
 import Calendar from './pages/Calendar';
 import Settings from './pages/Settings';
 import MyInfo from './pages/MyInfo';
+import MapContainer from './components/Map/MapContainer';
+import LandingPage from './components/Map/LandingPage';
+import GoogleLogin from './components/Login/GoogleLogin';
+import KaKaoLogin from './components/Login/KaKaoLogin';
 
 function App() {
   return (
     <>
-      <Header />
+      {/* <Header />
       <Routes>
         <Route path='/' element={<Start />}></Route>
         <Route path='/Login' element={<Login />}></Route>
@@ -27,7 +31,10 @@ function App() {
         <Route path='/MyInfo' element={<MyInfo />}></Route>
         <Route path='/Settings' element={<Settings />}></Route>
       </Routes>
-      <Footer />
+      <Footer /> */}
+      <LandingPage/>
+      <GoogleLogin/>
+      <KaKaoLogin/>
     </>
   );
 }
