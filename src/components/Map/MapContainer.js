@@ -8,7 +8,6 @@ const MapContainer = ({ searchPlace }) => {
   const [longitude, setLongitude] = useState(null);
 
   // 검색 결과 상태변경
-
   const [Places, setPlaces] = useState([]);
 
   useEffect(() => {
