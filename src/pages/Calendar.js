@@ -15,7 +15,7 @@ const Calendar = () => {
   return (
     <div className="calendar-page-container">
       <CalendarComponent date={date} onDateChange={onDateChange} />
-      <hr/>
+
       <SimpleExerciseListView date={date} />
     </div>
   );

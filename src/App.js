@@ -52,7 +52,7 @@ function App() {
         <Route path='/settings' element={<Settings />}></Route>
 
       </Routes>
-      
+
       {/* 조건부로 Footer를 렌더링 */}
       {showHeaderFooter() && <Footer />}
     </>

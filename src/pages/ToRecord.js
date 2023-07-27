@@ -5,7 +5,6 @@ import React, { useState } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import ExerciseInputForm from "../components/ExerciseInputForm";
 import ExerciseListView from "../components/ExerciseListView";
-import "./ToRecord.css";
 const ToRecord = () => {
     const [date, setDate] = useState(moment(new Date()).format("YYYY-MM-DD"));
     const data = useSelector((state) => state.exercise.value);
@@ -23,24 +22,26 @@ const ToRecord = () => {
         setIsShowCalendar(!isShowCalendar);
     };
     return (
-        <div className="container">
-            <ExerciseInputForm date={date} />
-            <button className="show-calendar-btn" onClick={handleCalendarView}>
-                날짜 선택하기
-            </button>{" "}
-            {isShowCalendar ? (
-                <CalendarLib
-                    onChange={(d) => onDateChange(d)}
-                    value={date}
-                    tileClassName={({ date, view }) => {
-                        if (mark.find((x) => x === moment(date).format("YYYY-MM-DD"))) {
-                            return "highlight";
-                        }
-                    }}
-                />
-            ) : null}
-            <ExerciseListView date={date} />
-        </div>
+        <main className="w-80 h-[800px] bg-[#ffffff] absolute top-0 left-0 z-0 ">
+            <div className=" p-[30px] absolute top-[120px] left-0">
+                <ExerciseInputForm date={date} />
+                <button className="bg-[#ADDE7D] p-[20px] rounded-2xl " onClick={handleCalendarView}>
+                    날짜 선택하기
+                </button>
+                {isShowCalendar ? (
+                    <CalendarLib
+                        onChange={(d) => onDateChange(d)}
+                        value={date}
+                        tileClassName={({ date, view }) => {
+                            if (mark.find((x) => x === moment(date).format("YYYY-MM-DD"))) {
+                                return "highlight";
+                            }
+                        }}
+                    />
+                ) : null}
+                <ExerciseListView date={date} />
+            </div>
+        </main>
     );
 };
 

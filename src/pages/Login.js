@@ -21,7 +21,7 @@ const Login = () => {
                 <input id="emailAddress" type="email" placeholder="email" className="w-[300px] h-[50px] rounded-[50px] mb-[15px] border-solid border-2 border-[#afafaf] p-5"></input>
                 <input id="userPassword" type="password" placeholder="password" className="w-[300px] h-[50px] rounded-[50px] border-solid border-2 border-[#afafaf] p-5"></input>
             </div>
-            <Link to="/Main">
+            <Link to="/main">
                 <button className="w-[300px] h-[75px] bg-[#ADDE7D] rounded-[50px] absolute top-[590px] left-2.5">
                     <span className="text-[30px] font-bold ">Login</span>
                 </button>
