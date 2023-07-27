@@ -1,6 +1,18 @@
-.input-container {
+.exercise-input-container {
   display: flex;
   justify-content: space-between;
+  border-radius: 1rem;
+  background-color: white;
+  margin-bottom: .5rem;
+}
+.time-input-container {
+  display: flex;
+  border-radius: 1rem;
+  justify-content: space-between;
+}
+.time-input-container > input {
+  background-color: white;
+  border-radius: 1rem;
 }
 .exerciselist-btn {
   background: none;
@@ -16,4 +28,5 @@
 }
 svg {
   font-size: 16px;
+  margin-right: 10px;
 }

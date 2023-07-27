@@ -1,8 +1,9 @@
 input {
-  padding: 15px 25px;
-  font-size: 15px;
+  padding: .5rem 1rem;
+  font-size: 1rem;
   border: none;
   outline: none;
+  background: none;
 }
 input::placeholder {
   color: #777777;

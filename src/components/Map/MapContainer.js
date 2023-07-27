@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react';
+import React, { useEffect, useState } from "react";
 
 const { kakao } = window;
 
@@ -11,9 +11,7 @@ const MapContainer = ({ searchPlace }) => {
 
   const [Places, setPlaces] = useState([]);
 
-
   useEffect(() => {
-
     // 현재 위치 받아오기  (리액트에 내장된 api)
     const getLocation = () => {
       if (navigator.geolocation) {
@@ -23,21 +21,20 @@ const MapContainer = ({ searchPlace }) => {
             setLongitude(position.coords.longitude);
           },
           (error) => {
-            console.error('cannot find location', error);
+            console.error("cannot find location", error);
           }
-        )
+        );
       } else {
-        console.error('Geolocation is not supported by this browser.');
+        console.error("Geolocation is not supported by this browser.");
       }
     };
     getLocation();
 
-
     // 카카오 맵 API
     let infowindow = new kakao.maps.InfoWindow({ zIndex: 1 });
-    const container = document.getElementById('myMap');
+    const container = document.getElementById("myMap");
     const options = {
-      center: new kakao.maps.LatLng(latitude, longitude),//현재위치 입력
+      center: new kakao.maps.LatLng(latitude, longitude), //현재위치 입력
       level: 3,
     };
     const map = new kakao.maps.Map(container, options);
@@ -56,14 +53,12 @@ const MapContainer = ({ searchPlace }) => {
         }
 
         map.setBounds(bounds);
-        setPlaces(data)
-        console.log(Places)
+        setPlaces(data);
+        console.log(Places);
       }
     }
 
-
-
-    // 지도 마커 표시 
+    // 지도 마커 표시
     function displayMarker(place) {
       let marker = new kakao.maps.Marker({
         map: map,
@@ -71,12 +66,12 @@ const MapContainer = ({ searchPlace }) => {
       });
 
       // 마커에 클릭이벤트 등록
-      kakao.maps.event.addListener(marker, 'click', function () {
+      kakao.maps.event.addListener(marker, "click", function () {
         // 마커를 클릭시 장소명 인포윈도우에 표출
         infowindow.setContent(
           '<div style="padding:5px;font-ize:12px;">' +
-          place.place_name +
-          '</div>'
+            place.place_name +
+            "</div>"
         );
         infowindow.open(map, marker);
       });
@@ -88,16 +83,18 @@ const MapContainer = ({ searchPlace }) => {
       <div
         id="myMap"
         style={{
-          width: '500px',
-          height: '500px',
+          width: "500px",
+          height: "500px",
         }}
       ></div>
       <div id="result-list">
         {Places.map((item, i) => (
-          <div key={i} style={{ marginTop: '20px' }}>
+          <div key={i} style={{ marginTop: "20px" }}>
             <span>{i + 1}</span>
             <div>
-              <h5><a href={item.place_url}>{item.place_name}</a></h5>
+              <h5>
+                <a href={item.place_url}>{item.place_name}</a>
+              </h5>
               {item.road_address_name ? (
                 <div>
                   <span>{item.road_address_name}</span>
@@ -118,7 +115,6 @@ const MapContainer = ({ searchPlace }) => {
 };
 
 export default MapContainer;
-
 
 // import React, { useEffect, useState } from 'react';
 
