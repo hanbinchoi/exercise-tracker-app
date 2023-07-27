@@ -14,8 +14,8 @@ import Settings from './pages/Settings';
 import MyInfo from './pages/MyInfo';
 import MapContainer from './components/Map/MapContainer';
 import LandingPage from './components/Map/LandingPage';
-import GoogleLogin from './components/Login/GoogleLogin';
-import KaKaoLogin from './components/Login/KaKaoLogin';
+
+
 
 function App() {
   // Header와 Footer가 보여질 페이지 경로 목록
@@ -33,17 +33,19 @@ function App() {
         <Route path='/' element={<Start />}></Route>
         <Route path='/login' element={<Login />}></Route>
         <Route path='/main' element={<Main />}></Route>
+        <Route path='/Kakao/callback' element={<Main />}></Route>
+        <Route path='/Oauth' element={<Main />}></Route>
         <Route path='/to-record' element={<ToRecord />}></Route>
         <Route path='/view-record' element={<ViewRecord />}></Route>
-        <Route path='/mapSearch' element={<MapSearch />}></Route>
+        <Route path='/MapSearch' element={<MapSearch />}></Route>
         <Route path='/exercise-gps' element={<ExerciseGPS />}></Route>
         <Route path='/calendar' element={<Calendar />}></Route>
         <Route path='/myInfo' element={<MyInfo />}></Route>
         <Route path='/settings' element={<Settings />}></Route>
+
       </Routes>
-      <LandingPage />
-      <GoogleLogin />
-      <KaKaoLogin />
+      
+      
       {/* 조건부로 Footer를 렌더링 */}
       {showHeaderFooter() && <Footer />}
     </>
