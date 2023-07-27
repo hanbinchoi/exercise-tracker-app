@@ -22,7 +22,7 @@ const ToRecord = () => {
         setIsShowCalendar(!isShowCalendar);
     };
     return (
-        <main className="w-80 h-[800px] bg-[#ffffff] absolute top-0 left-0 z-0 ">
+        <main className="w-80 h-[800px] bg-[#ffffff] absolute top-0 left-0 border-2 border-[#E6E6E6] z-0 ">
             <div className=" p-[30px] absolute top-[120px] left-0">
                 <ExerciseInputForm date={date} />
                 <button className="bg-[#ADDE7D] p-[20px] rounded-2xl " onClick={handleCalendarView}>

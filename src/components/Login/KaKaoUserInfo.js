@@ -3,7 +3,7 @@ import axios from "axios"
 
 const KakaoUserInfo = () => {
     useEffect(() => {
-        const params= new URL(document.location.toString()).searchParams;
+        const params = new URL(document.location.toString()).searchParams;
         const code = params.get('code');
         const grantType = "authorization_code";
         const CLIENT_ID = `${process.env.REACT_APP_REST_API_KEY}`
@@ -14,32 +14,32 @@ const KakaoUserInfo = () => {
             {},
             { headers: { "Content-type": "application/x-www-form-urlencoded;charset=utf-8" } }
         )
-        .then((res) => {
-            console.log(res);
-
-
-            const { access_token } = res.data;
-            axios.post(
-                `https://kapi.kakao.com/v2/user/me`,
-                {},
-                {
-                    headers: {
-                        Authorization: `Bearer ${access_token}`,
-                        "Content-type": "application/x-www-form-urlencoded;charset=utf-8",
-                    }
-                }
-            )
-            
             .then((res) => {
-                console.log('2번쨰', res);
+                console.log(res);
+
+
+                const { access_token } = res.data;
+                axios.post(
+                    `https://kapi.kakao.com/v2/user/me`,
+                    {},
+                    {
+                        headers: {
+                            Authorization: `Bearer ${access_token}`,
+                            "Content-type": "application/x-www-form-urlencoded;charset=utf-8",
+                        }
+                    }
+                )
+
+                    .then((res) => {
+                        console.log('2번째', res);
+                    })
             })
-        })
-        .catch((Error) => {
-            console.log(Error)
-        })
+            .catch((Error) => {
+                console.log(Error)
+            })
     }, [])
-    
-    return(
+
+    return (
         <>
         </>
     )
