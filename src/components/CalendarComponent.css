@@ -2,6 +2,7 @@
 .calendar-container {
   display: flex;
   align-items: center;
+  background-color: white;
 }
 
 /* 달력 CSS */
