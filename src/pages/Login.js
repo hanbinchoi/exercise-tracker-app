@@ -1,6 +1,9 @@
 // 로그인 창
 import React from "react";
 import { Link } from 'react-router-dom';
+import GoogleLogin from '../components/Login/GoogleLogin';
+import KaKaoLogin from '../components/Login/KaKaoLogin';
+
 
 const Login = () => {
     return (
@@ -23,6 +26,9 @@ const Login = () => {
                     <span className="text-[30px] font-bold ">Login</span>
                 </button>
             </Link>
+            {/* 로그인 버튼 */}
+            <GoogleLogin />
+            <KaKaoLogin />
             <div className="flex items-center absolute top-[690px] left-0">
                 <div className="mx-[25px]">
                     <input type="checkbox" className="mr-3" />

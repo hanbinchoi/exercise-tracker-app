@@ -38,7 +38,7 @@ function ExerciseInputForm({ date }) {
   };
   return (
     <form onSubmit={handleSubmit}>
-      <div className="input-container">
+      <div className="exercise-input-container">
         <Input
           required={true}
           type="text"
@@ -63,7 +63,7 @@ function ExerciseInputForm({ date }) {
           <Exercise handleExerciseClick={handleExerciseClick} />
         </>
       ) : null}
-      <div className="input-container">
+      <div className="time-input-container">
         <Input
           required={true}
           type="number"
