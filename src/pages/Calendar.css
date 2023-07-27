@@ -1,0 +1,19 @@
+.calendar-page-container {
+  margin: 4rem 0 0 0;
+  padding: 20px 0;
+  width: 20rem;
+  height: 45rem;
+  background-color: #FdF6e6;
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: 22rem .5rem 10rem;
+  align-items: center;
+  gap: 2rem;
+  background-color: white;
+}
+
+hr {
+  height: 1px;
+  margin: 0;
+  padding: 0;
+}
