@@ -1,12 +1,12 @@
-// GPS 창
+// 타이머창
 
 import React from "react";
 
-const ExerciseGPS = () => {
+const Timer = () => {
     return (
         <>
         </>
     )
 };
 
-export default ExerciseGPS;
+export default Timer;

@@ -1,14 +1,4 @@
-.container {
-  padding: 40px 30px;
-  display: grid;
-  grid-template-columns: 1fr;
-  align-items: center;
-}
 
-/* 달력 컨테이너 CSS */
-.calendar-container {
-  padding: 20px 0;
-}
 
 /* 달력 CSS */
 .react-calendar {
