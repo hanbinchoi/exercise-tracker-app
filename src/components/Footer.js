@@ -3,7 +3,7 @@ import React from "react";
 
 const Footer = () => {
     return (
-        <footer className="w-80 h-16 bg-[#E1E9DA] flex items-center p-5 absolute top-[736px] left-0 z-10">
+        <footer className="w-80 h-16 bg-[#E1E9DA] flex items-center p-5 absolute top-[736px] left-0">
             <div className="w-[40px] h-[40px]"
                 style={{
                     backgroundImage: `url('/images/AddBtn.png')`, // 배경 이미지
