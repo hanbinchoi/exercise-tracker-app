@@ -19,6 +19,8 @@ function LandingPage() {
 
   return (
     <>
+    
+    <div>
       <form className="inputForm" onSubmit={handleSubmit}>
         <input
           placeholder="지역과 헬스장이름 입력하세요"
@@ -28,6 +30,7 @@ function LandingPage() {
         <button type="submit">검색</button>
       </form>
       <MapContainer searchPlace={Place} />
+    </div>
     </>
   );
 }
