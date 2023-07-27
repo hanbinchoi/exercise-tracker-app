@@ -13,6 +13,8 @@
   display: grid;
   grid-template-columns: 1fr;
   gap: 15px;
+  height: 8rem;
+  overflow-y: scroll;
 }
 
 .exercise-container li {
@@ -25,6 +27,7 @@
   justify-content: space-between;
   align-items: center;
   color: #777777;
+  background-color: white;
 }
 
 li > button {
