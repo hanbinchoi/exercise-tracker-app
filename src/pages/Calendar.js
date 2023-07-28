@@ -13,11 +13,9 @@ const Calendar = () => {
   };
 
   return (
-    <div className="calendar-page-container">
+    <div className="calendar-page-container w-80 h-[800px]bg - [#ffffff] absolute top - 0 left - 0 border - 2 border - [#E6E6E6] z - 0 ">
       <CalendarComponent date={date} onDateChange={onDateChange} />
-
       <hr />
-
       <SimpleExerciseListView date={date} />
     </div>
   );

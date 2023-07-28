@@ -7,7 +7,7 @@ import KaKaoLogin from '../components/Login/KaKaoLogin';
 
 const Login = () => {
     return (
-        <main className="w-80 h-[800px] bg-[#ffffff] relative top-0 left-0 z-0">
+        <main className="w-80 h-[800px] bg-[#ffffff] relative top-0 left-0 z-0 border-2 border-[#E6E6E6]">
             <div className="flex flex-col items-center absolute top-[60px] left-2.5">
                 <h1 className="text-[30px] font-bold mb-[30px]">로그인</h1>
                 <div className="w-[300px] h-[282.878px] mb-[30px]"
@@ -18,27 +18,18 @@ const Login = () => {
                         backgroundRepeat: 'no-repeat', // 이미지 반복 지정
                     }}
                 />
-                <input id="emailAddress" type="email" placeholder="email" className="w-[300px] h-[50px] rounded-[50px] mb-[15px] border-solid border-2 border-[#afafaf] p-5"></input>
-                <input id="userPassword" type="password" placeholder="password" className="w-[300px] h-[50px] rounded-[50px] border-solid border-2 border-[#afafaf] p-5"></input>
             </div>
             <Link to="/main">
-                <button className="w-[300px] h-[75px] bg-[#ADDE7D] rounded-[50px] absolute top-[590px] left-2.5">
-                    <span className="text-[30px] font-bold ">Login</span>
+                <button className="w-[300px] h-[80px] bg-[#FCEC4F] absolute top-[490px] left-2.5  border-2 border-[#E6E6E6] flex items-center">
+                    <img className="w-[40px] h-[40px] mx-[10px]" src="/images/Kakao.png" alt=" 카카오 로그인" />
+                    <KaKaoLogin />
+                </button>
+                <button className="w-[300px] h-[80px] bg-[#FFFFFF] absolute top-[590px] left-2.5 border-2 border-[#E6E6E6] flex items-center">
+                    <img className="w-[40px] h-[40px] mx-[20px]" src="/images/google.png" alt=" 구글 로그인 " />
+                    <GoogleLogin />
                 </button>
             </Link>
             {/* 로그인 버튼 */}
-            <GoogleLogin />
-            <KaKaoLogin />
-            <div className="flex items-center absolute top-[690px] left-0">
-                <div className="mx-[25px]">
-                    <input type="checkbox" className="mr-3" />
-                    <a className="text-stone-500">아이디 저장</a>
-                </div>
-                <div className="mx-[25px]">
-                    <input type="checkbox" className="mr-3" />
-                    <a className="text-stone-500">자동 로그인</a>
-                </div>
-            </div>
         </main>
     )
 };

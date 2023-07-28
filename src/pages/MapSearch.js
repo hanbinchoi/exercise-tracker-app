@@ -5,9 +5,9 @@ import LandingPage from "../components/Map/LandingPage";
 
 const MapSearch = () => {
     return (
-        <>
-        <LandingPage />
-        </>
+        <main className="w-80 h-[800px] bg-[#ffffff] absolute top-0 left-0 border-2 border-[#E6E6E6] z-0 ">
+            <LandingPage />
+        </main>
     )
 };
 
