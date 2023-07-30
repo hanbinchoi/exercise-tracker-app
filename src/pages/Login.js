@@ -3,7 +3,6 @@ import React from "react";
 import GoogleLogin from '../components/Login/GoogleLogin';
 import KaKaoLogin from '../components/Login/KaKaoLogin';
 
-
 const Login = () => {
     return (
         <main className="w-80 h-[800px] bg-[#ffffff] relative top-0 left-0 z-0 border-2 border-[#E6E6E6]">

@@ -4,7 +4,7 @@ import React, { useState } from "react";
 import moment from "moment";
 import CalendarComponent from "../components/CalendarComponent";
 import SimpleExerciseListView from "../components/SimpleExerciseListView";
-import "./Calendar.css"
+import "./Calendar.css";
 const Calendar = () => {
   // value = 선택한 날짜 / onChange = 날짜 변경 함수
   const [date, setDate] = useState(moment(new Date()).format("YYYY-MM-DD"));

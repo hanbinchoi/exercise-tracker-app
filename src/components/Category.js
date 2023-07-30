@@ -1,10 +1,10 @@
-import { Link } from 'react-router-dom';
+import { Link } from "react-router-dom";
 
 const Cartegory = ({ setCategoryVisible }) => {
-    // 카테고리 숨기기
-    const hideCategory = () => {
-        setCategoryVisible((prev) => !prev);
-    };
+  // 카테고리 숨기기
+  const hideCategory = () => {
+    setCategoryVisible((prev) => !prev);
+  };
 
     return (
         <main className="w-[260px] h-[800px] bg-[#ffffff] absolute top-0 left-0 z-20 border-solid border border-[#afafaf]">
@@ -42,7 +42,7 @@ const Cartegory = ({ setCategoryVisible }) => {
                         onClick={hideCategory}>운동 기록</li>
                 </Link>
                 {/* 운동 루틴 작성 */}
-                <Link to="/view-record">
+                <Link to="/exercise-routine">
                     <li className="text-[20px] py-[15px] pl-[25px] border-solid border-t border-[#afafaf]"
                         onClick={hideCategory}>운동 루틴 작성</li>
                 </Link>

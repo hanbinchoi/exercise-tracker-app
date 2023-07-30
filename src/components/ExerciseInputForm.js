@@ -1,33 +1,62 @@
 import { useState } from "react";
 import useInput from "../hooks/useInput";
-import { useDispatch } from "react-redux";
+import { useDispatch, useSelector } from "react-redux";
 import { addExercise } from "../redux/exerciseSlice";
+import { addRoutine } from "../redux/routineSlice";
 import { FaCaretDown, FaCaretUp } from "react-icons/fa";
 import Input from "./Input";
 import Exercise from "./Exercise";
 import "./ExerciseInput.css";
 
-function ExerciseInputForm({ date }) {
+function ExerciseInputForm({ date, routine, closeModal }) {
   const [exercise, exerciseBind, resetExercise] = useInput("");
   const [time, timeBind, resetTime] = useInput("");
   const [isShowDropdown, setIsShowDropdown] = useState(false);
   const dispatch = useDispatch();
+  const routineData = useSelector((state) => state.routine.value);
   const handleExerciseClick = (e, data) => {
     e.stopPropagation();
     exerciseBind.onChange(e, data);
     setIsShowDropdown(false);
   };
   const handleSubmit = (e) => {
-    console.log(exercise, time);
     e.preventDefault();
-    dispatch(
-      addExercise({
-        id: new Date().getTime() + Math.random(),
-        date,
-        exercise,
-        time,
-      })
-    );
+    if (routine) {
+      if (routineData.length === 0) {
+        const now = new Date();
+        const start = [now.getFullYear(), now.getMonth() + 1, now.getDate()];
+        dispatch(
+          addRoutine({
+            id: new Date().getTime() + Math.random(),
+            start,
+            idx: routineData.length,
+            exercise,
+            time,
+          })
+        );
+      } else {
+        dispatch(
+          addRoutine({
+            id: new Date().getTime() + Math.random(),
+            idx: routineData.length,
+            exercise,
+            time,
+          })
+        );
+      }
+
+      closeModal();
+    } else {
+      dispatch(
+        addExercise({
+          id: new Date().getTime() + Math.random(),
+          date,
+          exercise,
+          time,
+        })
+      );
+    }
+
     setIsShowDropdown(false);
     resetExercise();
     resetTime();
