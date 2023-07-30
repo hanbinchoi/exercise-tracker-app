@@ -6,9 +6,9 @@ function ExerciseListView({ date }) {
   const data = useSelector((state) => state.exercise.value);
   const routine = useSelector((state) => state.routine.value);
   const start = new Date(
-    routine[0].start[0],
-    routine[0].start[1],
-    routine[0].start[2]
+    routine[0]?.start[0],
+    routine[0]?.start[1],
+    routine[0]?.start[2]
   );
   const now = new Date(date);
   console.log(start, now);

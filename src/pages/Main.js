@@ -25,7 +25,6 @@ const Main = () => {
         <ExerciseListView date={date} />
         <KakaoUserInfo />
       </div>
-
     </main>
   );
 };
