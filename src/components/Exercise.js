@@ -10,7 +10,7 @@ function Exercise({ handleExerciseClick }) {
     async function fetchExerciseData() {
       await axios
         .get(
-          "https://api.odcloud.kr/api/15068730/v1/uddi:2dd1a2cb-6030-48a2-980d-c31f0cc18b6c?page=1&perPage=10&returnType=JSON&serviceKey=4tizpLwbVSjS3YtSR46gwWJ6G%2BKnUD1ZfsoeHvlkFeeJwzXDOHL8E85hMJ1F5yn2c6bQH5BrxqIBfNnwLl8TJQ%3D%3D"
+          "https://api.odcloud.kr/api/15068730/v1/uddi:2dd1a2cb-6030-48a2-980d-c31f0cc18b6c?page=1&perPage=255&returnType=JSON&serviceKey=4tizpLwbVSjS3YtSR46gwWJ6G%2BKnUD1ZfsoeHvlkFeeJwzXDOHL8E85hMJ1F5yn2c6bQH5BrxqIBfNnwLl8TJQ%3D%3D"
         )
         .then((response) => {
           console.log(response.data); // 받은 데이터 확인

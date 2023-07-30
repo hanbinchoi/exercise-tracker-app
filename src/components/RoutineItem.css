@@ -1,0 +1,21 @@
+.item-container {
+  height: 60px;
+  font-size: 15px;
+  border-radius: 5px;
+  padding: 0 15px;
+  box-shadow: 4px 4px 4px rgba(0, 0, 0, 0.25);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  color: #777777;
+  background-color: white;
+}
+
+.routine-tag {
+  font-size: 8px;
+  background-color: tomato;
+  padding: 1px 5px;
+  color: white;
+  border-radius: 10px;
+  margin-right: 5px;
+}

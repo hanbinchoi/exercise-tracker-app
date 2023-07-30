@@ -19,7 +19,7 @@ function App() {
   const showHeaderFooterPaths = [
     "/main",
     "/to-record",
-    "/view-record",
+    "/exercise-routine",
     "/calendar",
     "/timer",
     "/mapSearch",
