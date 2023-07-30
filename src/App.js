@@ -36,7 +36,7 @@ function App() {
     showHeaderFooterPaths.includes(location.pathname);
 
   return (
-    <>
+    <div className="absolute top-0 left-[40%]">
       {/* 조건부로 Header를 렌더링 */}
       {showHeaderFooter() && <Header />}
       <Routes>
@@ -59,7 +59,7 @@ function App() {
 
       {/* 조건부로 Footer를 렌더링 */}
       {showHeaderFooter() && <Footer />}
-    </>
+    </div>
   );
 }
 
