@@ -1,6 +1,6 @@
 // 로그인 창
 import React from "react";
-import { Link } from 'react-router-dom';
+
 import GoogleLogin from '../components/Login/GoogleLogin';
 import KaKaoLogin from '../components/Login/KaKaoLogin';
 
@@ -19,7 +19,7 @@ const Login = () => {
                     }}
                 />
             </div>
-            <Link to="/main">
+            
                 <button className="w-[300px] h-[80px] bg-[#FCEC4F] absolute top-[490px] left-2.5  border-2 border-[#E6E6E6] flex items-center">
                     <img className="w-[40px] h-[40px] mx-[10px]" src="/images/Kakao.png" alt=" 카카오 로그인" />
                     <KaKaoLogin />
@@ -28,7 +28,8 @@ const Login = () => {
                     <img className="w-[40px] h-[40px] mx-[20px]" src="/images/google.png" alt=" 구글 로그인 " />
                     <GoogleLogin />
                 </button>
-            </Link>
+            
+           
             {/* 로그인 버튼 */}
         </main>
     )

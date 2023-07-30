@@ -9,6 +9,7 @@ import KakaoUserInfo from "../components/Login/KaKaoUserInfo";
 
 const Main = () => {
   // value = 선택한 날짜 / onChange = 날짜 변경 함수
+  const userinfo=sessionStorage.getItem('username')
   const [date, setDate] = useState(moment(new Date()).format("YYYY-MM-DD"));
   const onDateChange = (date) => {
     setDate(moment(date).format("YYYY-MM-DD"));
@@ -21,7 +22,8 @@ const Main = () => {
         <CalendarComponent date={date} onDateChange={onDateChange} />
       </div>
       <ExerciseListView date={date} />
-      <KakaoUserInfo />
+      {/* <KakaoUserInfo /> */}
+      <div>{userinfo}</div>
     </main>
   );
 };

@@ -12,10 +12,13 @@ import Timer from './pages/Timer';
 import Calendar from './pages/Calendar';
 import Settings from './pages/Settings';
 import MyInfo from './pages/MyInfo';
+import KakaoUserInfo from './components/Login/KaKaoUserInfo';
+import {useState} from 'react';
 
 
 function App() {
   // Header와 Footer가 보여질 페이지 경로 목록
+  const [isLogin,setIsLogin] = useState(false);
   const location = useLocation();
   const showHeaderFooterPaths = [
     "/main",
@@ -27,11 +30,12 @@ function App() {
     "/myInfo",
     "/settings",
     "/Kakao/callback",
+    "/Oauth"
   ];
   // 현재 경로가 showHeaderFooterPaths에 속하는지 확인하는 함수
   const showHeaderFooter = () =>
     showHeaderFooterPaths.includes(location.pathname);
-
+  console.log(isLogin)
   return (
     <>
       {/* 조건부로 Header를 렌더링 */}
@@ -50,6 +54,8 @@ function App() {
         <Route path='/Kakao/callback' element={<Main />}></Route>
         <Route path='/Oauth' element={<Main />}></Route>
       </Routes>
+      {isLogin===false ? <KakaoUserInfo isLogin={isLogin} setIsLogin={setIsLogin}/>:null}
+
 
       {/* 조건부로 Footer를 렌더링 */}
       {showHeaderFooter() && <Footer />}
