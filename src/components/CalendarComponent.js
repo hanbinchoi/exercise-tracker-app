@@ -25,7 +25,7 @@ const CalendarContainer = styled.div`
     // 큰 달력 부분
     > .react-calendar__viewContainer {
       display: flex;
-      align-items: center;
+      align-items: flex-start;
       > .react-calendar__month-view{
         > div {
           > div {
