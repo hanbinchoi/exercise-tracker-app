@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import Category from "./Category";
 import '../index.css';
+import { Link } from 'react-router-dom';
 
 const Header = () => {
   // 카테고리 보이기
@@ -26,16 +27,19 @@ const Header = () => {
         onClick={showCategory} // 아이콘 클릭 시 카테고리 보이기
       />
 
-      {/* "내 정보" 아이콘 */}
-      <button
-        className="w-[26px] h-[26px]"
-        style={{
-          backgroundImage: `url('/images/MyInfoIcon.png')`, // 배경 이미지
-          backgroundPosition: "center", // 이미지 위치
-          backgroundSize: "cover", // 이미지 꽉차게
-          backgroundRepeat: 'no-repeat', // 이미지 반복 지정
-        }}
-      />
+      <Link to="/myInfo">
+        {/* "내 정보" 아이콘 */}
+        <button
+          className="w-[26px] h-[26px]"
+          style={{
+            backgroundImage: `url('/images/MyInfoIcon.png')`, // 배경 이미지
+            backgroundPosition: "center", // 이미지 위치
+            backgroundSize: "cover", // 이미지 꽉차게
+            backgroundRepeat: 'no-repeat', // 이미지 반복 지정
+          }}
+        />
+      </Link>
+
 
       {/* 카테고리 컴포넌트 */}
       {categoryVisible ? <Category setCategoryVisible={setCategoryVisible} /> : null}

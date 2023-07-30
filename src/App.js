@@ -1,3 +1,4 @@
+
 import { Routes, Route, useLocation } from 'react-router-dom';
 import './index.css';
 import Header from './components/Header';
@@ -16,6 +17,7 @@ import KakaoUserInfo from './components/Login/KaKaoUserInfo';
 import {useState} from 'react';
 
 
+
 function App() {
   // Header와 Footer가 보여질 페이지 경로 목록
   const [isLogin,setIsLogin] = useState(false);
@@ -23,7 +25,7 @@ function App() {
   const showHeaderFooterPaths = [
     "/main",
     "/to-record",
-    "/view-record",
+    "/exercise-routine",
     "/calendar",
     "/timer",
     "/mapSearch",
@@ -41,18 +43,18 @@ function App() {
       {/* 조건부로 Header를 렌더링 */}
       {showHeaderFooter() && <Header />}
       <Routes>
-        <Route path='/' element={<Start />}></Route>
-        <Route path='/login' element={<Login />}></Route>
-        <Route path='/main' element={<Main />}></Route>
-        <Route path='/to-record' element={<ToRecord />}></Route>
-        <Route path='/view-record' element={<ViewRecord />}></Route>
-        <Route path='/calendar' element={<Calendar />}></Route>
-        <Route path='/timer' element={<Timer />}></Route>
-        <Route path='/mapSearch' element={<MapSearch />}></Route>
-        <Route path='/myInfo' element={<MyInfo />}></Route>
-        <Route path='/settings' element={<Settings />}></Route>
-        <Route path='/Kakao/callback' element={<Main />}></Route>
-        <Route path='/Oauth' element={<Main />}></Route>
+        <Route path="/" element={<Start />}></Route>
+        <Route path="/login" element={<Login />}></Route>
+        <Route path="/main" element={<Main />}></Route>
+        <Route path="/to-record" element={<ToRecord />}></Route>
+        <Route path="/exercise-routine" element={<ExerciseRoutine />}></Route>
+        <Route path="/calendar" element={<Calendar />}></Route>
+        <Route path="/timer" element={<Timer />}></Route>
+        <Route path="/mapSearch" element={<MapSearch />}></Route>
+        <Route path="/myInfo" element={<MyInfo />}></Route>
+        <Route path="/settings" element={<Settings />}></Route>
+        <Route path="/Kakao/callback" element={<Main />}></Route>
+        <Route path="/Oauth" element={<Main />}></Route>
       </Routes>
       {isLogin===false ? <KakaoUserInfo isLogin={isLogin} setIsLogin={setIsLogin}/>:null}
 
