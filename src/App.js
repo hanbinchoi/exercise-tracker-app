@@ -7,20 +7,20 @@ import Start from './pages/Start';
 import Login from './pages/Login';
 import Main from './pages/Main';
 import ToRecord from './pages/ToRecord';
-import ViewRecord from './pages/ViewRecord';
+import ExerciseRoutine from './pages/ExerciseRoutine';
 import MapSearch from './pages/MapSearch';
 import Timer from './pages/Timer';
 import Calendar from './pages/Calendar';
 import Settings from './pages/Settings';
 import MyInfo from './pages/MyInfo';
 import KakaoUserInfo from './components/Login/KaKaoUserInfo';
-import {useState} from 'react';
+import { useState } from 'react';
 
 
 
 function App() {
   // Header와 Footer가 보여질 페이지 경로 목록
-  const [isLogin,setIsLogin] = useState(false);
+  const [isLogin, setIsLogin] = useState(false);
   const location = useLocation();
   const showHeaderFooterPaths = [
     "/main",
@@ -56,7 +56,7 @@ function App() {
         <Route path="/Kakao/callback" element={<Main />}></Route>
         <Route path="/Oauth" element={<Main />}></Route>
       </Routes>
-      {isLogin===false ? <KakaoUserInfo isLogin={isLogin} setIsLogin={setIsLogin}/>:null}
+      {isLogin === false ? <KakaoUserInfo isLogin={isLogin} setIsLogin={setIsLogin} /> : null}
 
 
       {/* 조건부로 Footer를 렌더링 */}
