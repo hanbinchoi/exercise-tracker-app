@@ -11,10 +11,10 @@ function ExerciseListView({ date }) {
     routine[0]?.start[2]
   );
   const now = new Date(date);
-  console.log(start, now);
+
   const today = new Date(now.getFullYear(), now.getMonth() + 1, now.getDate());
   const idx = (today.getTime() - start.getTime()) / (1000 * 60 * 60 * 24);
-  console.log(idx);
+
   const dispatch = useDispatch();
   return (
     <>
