@@ -1,8 +1,11 @@
-import { useEffect } from "react";
+import { useEffect,} from "react";
 import axios from "axios"
 
-const KakaoUserInfo = () => {
+const KakaoUserInfo = ({isLogin,setIsLogin}) => {
+    // const [userName, setUserName] = useState();
     useEffect(() => {
+        
+
         const params = new URL(document.location.toString()).searchParams;
         const code = params.get('code');
         const grantType = "authorization_code";
@@ -32,12 +35,16 @@ const KakaoUserInfo = () => {
 
                     .then((res) => {
                         console.log('2번째', res);
+                        setIsLogin(true);
+                        console.log(res.data.properties.nickname)
+                        sessionStorage.setItem('username',res.data.properties.nickname); 
+                        
                     })
             })
             .catch((Error) => {
                 console.log(Error)
             })
-    }, [])
+    }, [setIsLogin])
 
     return (
         <>
