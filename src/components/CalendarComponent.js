@@ -11,8 +11,8 @@ function CalendarComponent({ date, onDateChange }) {
     <div className="calendar-container">
       <CalendarLib
         // 달 이동 화살표
-        nextLabel={null}
-        prevLabel={null}
+        // nextLabel={null}
+        // prevLabel={null}
         next2Label={null}
         prev2Label={null}
         // 일에 숫자만 들어가기
