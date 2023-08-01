@@ -85,13 +85,26 @@ const MapContainer = ({ searchPlace }) => {
         className="w-[300px] h-[300px]"
         id="myMap"
       ></div>
-      <div id="result-list">
+      <div
+        id="result-list"
+        className=" overflow-y-auto h-[260px] pb-[24px] overflow-hidden;"
+      >
         {Places.map((item, i) => (
-          <div key={i} style={{ marginTop: "20px" }}>
-            <span>{i + 1}</span>
+          <div
+            key={i}
+            className="mt-[20px] mx-[20px]"
+          >
             <div>
-              <h5>
-                <a href={item.place_url} target="_blank" rel="noreferrer" >{item.place_name}</a>
+              <h5 className="mb-[5px]">
+                <span className="mr-[10px]">{i + 1}.</span>
+                <a
+                  href={item.place_url}
+                  target="_blank"
+                  rel="noreferrer"
+                  className="font-bold"
+                >
+                  {item.place_name}
+                </a>
               </h5>
               {item.road_address_name
                 ? (
@@ -104,7 +117,11 @@ const MapContainer = ({ searchPlace }) => {
                 : (
                   <span>{item.address_name}</span>
                 )}
-              <span>{item.phone}</span>
+              <span
+                className="text-[#777]"
+              >
+                {item.phone}
+              </span>
             </div>
           </div>
         ))}

@@ -23,9 +23,12 @@ const Login = () => {
                 <img className="w-[40px] h-[40px] mx-[20px]" src="/images/Kakao.png" alt=" 카카오 로그인" />
                 <KaKaoLogin />
             </button>
-            <button className="w-[300px] h-[80px] bg-[#FFFFFF] absolute top-[590px] left-2.5 border-2 border-[#E6E6E6] flex items-center">
+            <button className="cursor-not-allowed w-[300px] h-[80px] bg-[#FFFFFF] absolute top-[590px] left-2.5 border-2 border-[#E6E6E6] flex items-center">
                 <img className="w-[40px] h-[40px] mx-[20px]" src="/images/google.png" alt=" 구글 로그인 " />
-                <GoogleLogin />
+                <div className="flex flex-col items-start">
+                    <GoogleLogin />
+                    <h2 className="absolute bottom-1 text-[10px] text-[#999]">로그인 공사중입니다.</h2>
+                </div>
             </button>
 
             {/* 로그인 버튼 */}
