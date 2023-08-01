@@ -6,9 +6,9 @@ import { addRoutine } from "../redux/routineSlice";
 import { FaCaretDown, FaCaretUp } from "react-icons/fa";
 import Input from "./Input";
 import Exercise from "./Exercise";
-import "./ExerciseInput.css";
+import { closeModal } from "../redux/modalSlice";
 
-function ExerciseInputForm({ date, routine, closeModal }) {
+function ExerciseInputForm({ date, routine }) {
   const [exercise, exerciseBind, resetExercise] = useInput("");
   const [time, timeBind, resetTime] = useInput("");
   const [isShowDropdown, setIsShowDropdown] = useState(false);
@@ -45,7 +45,7 @@ function ExerciseInputForm({ date, routine, closeModal }) {
         );
       }
 
-      closeModal();
+      dispatch(closeModal());
     } else {
       dispatch(
         addExercise({
@@ -67,7 +67,7 @@ function ExerciseInputForm({ date, routine, closeModal }) {
   };
   return (
     <form onSubmit={handleSubmit}>
-      <div className="exercise-input-container">
+      <div className="mb-[10px] w-full grid grid-cols-[7fr,2fr] gap-4">
         <Input
           required={true}
           type="text"
@@ -75,31 +75,32 @@ function ExerciseInputForm({ date, routine, closeModal }) {
           value={exerciseBind}
         />
         <button
-          className="exerciselist-btn"
-          type="button"
+          className="w-full flex justify-center items-center"
           onClick={handleClickExerciseList}
         >
           {isShowDropdown ? (
-            <FaCaretUp size={"20px"} />
+            <FaCaretUp size={"30px"} />
           ) : (
-            <FaCaretDown size={"20px"} />
+            <FaCaretDown size={"30px"} />
           )}
         </button>{" "}
+        {isShowDropdown ? (
+          <div className="h-[250px] overflow-scroll">
+            <Exercise handleExerciseClick={handleExerciseClick} />
+          </div>
+        ) : null}
       </div>
 
-      {isShowDropdown ? (
-        <>
-          <Exercise handleExerciseClick={handleExerciseClick} />
-        </>
-      ) : null}
-      <div className="time-input-container">
+      <div className="w-full grid grid-cols-[7fr,2fr] gap-4">
         <Input
           required={true}
           type="number"
           placeholder={"시간 입력"}
           value={timeBind}
         />
-        <button className="submit-btn">입력</button>
+        <button className="bg-[#ADDE7D] text-white font-bold rounded-md">
+          입력
+        </button>
       </div>
     </form>
   );

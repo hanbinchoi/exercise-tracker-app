@@ -1,4 +1,4 @@
-import React, { useEffect, useState, useRef } from 'react';
+import React, { useEffect, useState, useRef } from "react";
 
 function Timer() {
   const [initialMin, setInitialMin] = useState(0);
@@ -49,7 +49,7 @@ function Timer() {
       setIsPause(false);
       intervalRef.current = setInterval(countdown, 1000);
       setIsStarting(true);
-      console.log('start');
+      console.log("start");
     }
   };
 
@@ -83,36 +83,35 @@ function Timer() {
 
   return (
     <>
-    <div>d</div>
-    <div>d</div>
-    <div>d</div>
-    <div>d</div>
-          <input
-            type="number"
-            value={initialMin}
-            onChange={(e) => setInitialMin(e.target.value)}
-          />
-          <div className="text">minutes</div>
-          <input
-            type="number"
-            value={initialSec}
-            onChange={(e) => setInitialSec(e.target.value)}
-          />
-          <div className="text">seconds</div>
-        <button type="button" onClick={start}>
-          START
-        </button>
-        <button type="button" onClick={pauseAndResume}>
-          PAUSE/RESUME
-        </button>
-        <button type="button" onClick={reset}>
-          RESET
-        </button>
-        {minutes >= 10 ? minutes : `0${minutes}`} :{' '}
-        {seconds >= 10 ? seconds : `0${seconds}`}
-        </>
+      <div>d</div>
+      <div>d</div>
+      <div>d</div>
+      <div>d</div>
+      <input
+        type="number"
+        value={initialMin}
+        onChange={(e) => setInitialMin(e.target.value)}
+      />
+      <div className="text">minutes</div>
+      <input
+        type="number"
+        value={initialSec}
+        onChange={(e) => setInitialSec(e.target.value)}
+      />
+      <div className="text">seconds</div>
+      <button type="button" onClick={start}>
+        START
+      </button>
+      <button type="button" onClick={pauseAndResume}>
+        PAUSE/RESUME
+      </button>
+      <button type="button" onClick={reset}>
+        RESET
+      </button>
+      {minutes >= 10 ? minutes : `0${minutes}`} :{" "}
+      {seconds >= 10 ? seconds : `0${seconds}`}
+    </>
   );
 }
-
 
 export default Timer;

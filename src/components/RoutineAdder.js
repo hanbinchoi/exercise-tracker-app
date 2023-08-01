@@ -2,19 +2,17 @@ import { useState } from "react";
 import ModalPortal from "./modal/ModalPortal";
 import RoutineModal from "./modal/RoutineModal";
 import "./RoutineAdder.css";
+import { useDispatch, useSelector } from "react-redux";
+import { openModal } from "../redux/modalSlice";
 
 function RoutineAdder({ footer }) {
-  const [modalOpen, setModalOpen] = useState(false);
-  const openModal = () => {
-    setModalOpen(true);
-  };
-  const closeModal = () => {
-    setModalOpen(false);
-  };
+  const modal = useSelector((state) => state.modal.value);
+  const dispatch = useDispatch();
+  console.log(modal);
   return (
     <div>
       {footer ? (
-        <div
+        <button
           className="w-[40px] h-[40px]"
           style={{
             backgroundImage: `url('/images/AddBtn.png')`, // 배경 이미지
@@ -22,16 +20,19 @@ function RoutineAdder({ footer }) {
             backgroundSize: "cover", // 이미지 꽉차게
             backgroundRepeat: "no-repeat", // 이미지 반복 지정
           }}
-          onClick={openModal}
+          onClick={() => dispatch(openModal())}
         />
       ) : (
-        <button className="add-routine-btn" onClick={openModal}>
+        <button
+          className="add-routine-btn"
+          onClick={() => dispatch(openModal())}
+        >
           루틴 추가하기
         </button>
       )}
-      {modalOpen && (
+      {modal && (
         <ModalPortal>
-          <RoutineModal closeModal={closeModal} />
+          <RoutineModal />
         </ModalPortal>
       )}
     </div>
