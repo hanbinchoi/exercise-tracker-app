@@ -1,10 +1,7 @@
 // 운동 기록 (ver. 캘린더)
 import React, { useState } from "react";
-// import "react-calendar/dist/Calendar.css"; // css import
 import moment from "moment";
 import CalendarComponent from "../components/CalendarComponent";
-import SimpleExerciseListView from "../components/SimpleExerciseListView";
-import "./Calendar.css";
 import ExerciseListView from "../components/ExerciseListView";
 const Calendar = () => {
   // value = 선택한 날짜 / onChange = 날짜 변경 함수
@@ -15,12 +12,15 @@ const Calendar = () => {
   console.log(date.getFullYear);
 
   return (
-    <div className="calendar-page-container w-80 h-[800px]bg - [#ffffff] absolute top-0 left-0 border-2 border-[#E6E6E6] z-0 ">
-      <CalendarComponent date={date} onDateChange={onDateChange} />
-      <hr />
-      {/* <SimpleExerciseListView date={date} /> */}
+    <main className="pt-16 w-80 h-[800px] border-2 border-[#E6E6E6]">
+      <div className="border-b border-[#E6E6E6]">
+        <CalendarComponent
+          date={date}
+          onDateChange={onDateChange}
+        />
+      </div>
       <ExerciseListView date={date} />
-    </div>
+    </main>
   );
 };
 
