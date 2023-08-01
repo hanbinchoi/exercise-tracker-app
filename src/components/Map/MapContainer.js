@@ -87,7 +87,7 @@ const MapContainer = ({ searchPlace }) => {
       ></div>
       <div
         id="result-list"
-        className=" overflow-y-auto h-[260px] pb-[24px] overflow-hidden;"
+        className=" overflow-y-auto h-[260px] pb-[24px];"
       >
         {Places.map((item, i) => (
           <div

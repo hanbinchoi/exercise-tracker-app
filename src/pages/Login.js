@@ -19,11 +19,11 @@ const Login = () => {
                 />
             </div>
 
-            <button className="w-[300px] h-[80px] bg-[#FCEC4F] absolute top-[490px] left-2.5  border-2 border-[#E6E6E6] flex items-center">
+            <button className="w-[300px] h-[80px] bg-[#FCEC4F] rounded-2xl absolute top-[490px] left-2.5  border-2 border-[#E6E6E6] flex items-center">
                 <img className="w-[40px] h-[40px] mx-[20px]" src="/images/Kakao.png" alt=" 카카오 로그인" />
                 <KaKaoLogin />
             </button>
-            <button className="cursor-not-allowed w-[300px] h-[80px] bg-[#FFFFFF] absolute top-[590px] left-2.5 border-2 border-[#E6E6E6] flex items-center">
+            <button className="cursor-not-allowed w-[300px] h-[80px] bg-[#FFFFFF] rounded-2xl absolute top-[590px] left-2.5 border-2 border-[#E6E6E6] flex items-center">
                 <img className="w-[40px] h-[40px] mx-[20px]" src="/images/google.png" alt=" 구글 로그인 " />
                 <div className="flex flex-col items-start">
                     <GoogleLogin />

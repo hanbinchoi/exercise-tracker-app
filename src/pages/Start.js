@@ -15,7 +15,7 @@ const Start = () => {
                     height: '710px'
                 }}>
                 <Link to="/login">
-                    <button className="w-[300px] h-[75px] absolute left-2.5 top-[590px] bg-[#ADDE7D] rounded-[50px] ">
+                    <button className="w-72 h-20 absolute left-2.5 top-[590px] bg-[#ADDE7D] rounded-2xl ">
                         <span className="text-[30px] font-bold ">Start</span>
                     </button>
                 </Link>
