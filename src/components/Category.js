@@ -1,11 +1,16 @@
+import { useDispatch } from "react-redux";
 import { Link } from "react-router-dom";
+import { closeModal } from "../redux/modalSlice";
 
 const Cartegory = ({ setCategoryVisible }) => {
   // 카테고리 숨기기
   const hideCategory = () => {
     setCategoryVisible((prev) => !prev);
   };
+  const dispatch = useDispatch();
   const name = sessionStorage.getItem("username");
+
+  dispatch(closeModal());
   return (
     <main className="w-[260px] h-[800px] bg-[#ffffff] absolute top-0 left-0 z-20 border-solid border border-[#afafaf]">
       <button
@@ -16,7 +21,9 @@ const Cartegory = ({ setCategoryVisible }) => {
           backgroundSize: "cover", // 이미지 꽉차게
           backgroundRepeat: "no-repeat", // 이미지 반복 지정
         }}
-        onClick={hideCategory} // 버튼 클릭 시 카테고리 숨기기
+        onClick={() => {
+          hideCategory();
+        }} // 버튼 클릭 시 카테고리 숨기기
       />
       <div className="flex flex-col items-center absolute top-[100px] left-[25px]">
         <div
