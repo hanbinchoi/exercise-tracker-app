@@ -15,11 +15,13 @@ const Main = () => {
   };
   return (
     <main className="w-80 h-[800px] bg-[#FDF6E6] relative top-0 left-0 z-0 border-2 border-[#E6E6E6]">
-      <div className=" absolute top-[80px] mx-[10px] ">
-        <div className="my-[40px] border-2 border-[#E6E6E6]">
+      <div className="absolute top-[80px] mx-[10px] ">
+        <div className="mb-[20px] border-2 border-[#E6E6E6]">
           <CalendarComponent date={date} onDateChange={onDateChange} />
         </div>
-        <ExerciseInputForm date={date} />
+        <div className="mb-[20px]">
+          <ExerciseInputForm date={date} />
+        </div>
         <ExerciseListView date={date} />
       </div>
     </main>

@@ -14,15 +14,17 @@ function ExerciseListView({ date }) {
 
   const today = new Date(now.getFullYear(), now.getMonth() + 1, now.getDate());
   const idx = (today.getTime() - start.getTime()) / (1000 * 60 * 60 * 24);
-
+  console.log(idx);
   const dispatch = useDispatch();
   return (
     <>
       <div className="todo">Todo.</div>
       <ul className="exercise-container">
-        {routine[idx % routine.length] !== undefined && (
-          <RoutineItem routine={routine[idx % routine.length]} />
-        )}
+        {idx < 0
+          ? null
+          : routine[idx % routine.length] !== undefined && (
+              <RoutineItem routine={routine[idx % routine.length]} />
+            )}
         {data
           .filter((ele) => ele.date === date)
           .map((ele) => (

@@ -5,10 +5,12 @@ import { persistReducer } from "redux-persist";
 import { combineReducers } from "redux";
 import storage from "redux-persist/lib/storage";
 import routineSlice from "./routineSlice";
+import modalSlice from "./modalSlice";
 
 const reducers = combineReducers({
   exercise: exerciseSlice.reducer,
   routine: routineSlice.reducer,
+  modal: modalSlice.reducer,
 });
 
 const persistConfig = {
