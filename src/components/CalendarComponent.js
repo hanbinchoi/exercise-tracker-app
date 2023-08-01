@@ -6,8 +6,13 @@ import styled from "styled-components";
 
 const CalendarContainer = styled.div`
   > .react-calendar {
-    height:20rem;
-    margin-top: 30px;
+    height:auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    padding : 10px;
+    background-color:white;
+    border-radius:5px;
     // yyyy-mm 페이지 부분
     > .react-calendar__navigation {
       height: 50px;
