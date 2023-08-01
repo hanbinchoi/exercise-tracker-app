@@ -5,6 +5,7 @@ import moment from "moment";
 import CalendarComponent from "../components/CalendarComponent";
 import SimpleExerciseListView from "../components/SimpleExerciseListView";
 import "./Calendar.css";
+import ExerciseListView from "../components/ExerciseListView";
 const Calendar = () => {
   // value = 선택한 날짜 / onChange = 날짜 변경 함수
   const [date, setDate] = useState(moment(new Date()).format("YYYY-MM-DD"));
@@ -17,7 +18,8 @@ const Calendar = () => {
     <div className="calendar-page-container w-80 h-[800px]bg - [#ffffff] absolute top-0 left-0 border-2 border-[#E6E6E6] z-0 ">
       <CalendarComponent date={date} onDateChange={onDateChange} />
       <hr />
-      <SimpleExerciseListView date={date} />
+      {/* <SimpleExerciseListView date={date} /> */}
+      <ExerciseListView date={date} />
     </div>
   );
 };
