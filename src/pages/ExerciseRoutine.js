@@ -7,17 +7,9 @@ import RoutineItem from "../components/RoutineItem";
 
 const ExerciseRoutine = () => {
   const routines = useSelector((state) => state.routine.value);
-  console.log(routines);
   return (
     <main className="w-80 h-[800px] bg-[#ffffff] absolute top-0 left-0 border-2 border-[#E6E6E6] z-0 ">
-      <div
-        style={{
-          marginTop: "100px",
-          display: "flex",
-          flexDirection: "column",
-          gap: "10px",
-        }}
-      >
+      <div className="h-[600px] mt-[80px] px-[20px] grid grid-cols-1 grid-rows-[repeat(7,75px)] gap-5">
         {routines.length < 7 ? <RoutineAdder /> : null}
         {routines.map((ele) => (
           <RoutineItem key={ele.id} routine={ele} />

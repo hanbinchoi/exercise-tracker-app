@@ -1,5 +1,4 @@
 import React from "react";
-import "./RoutineItem.css";
 import { useDispatch } from "react-redux";
 import { deleteRoutine } from "../redux/routineSlice";
 function RoutineItem({ routine, footer }) {
@@ -26,12 +25,19 @@ function RoutineItem({ routine, footer }) {
           {routine.exercise.slice(0, 1)}
         </li>
       ) : (
-        <li className="item-container">
-          <div>
-            <span className="routine-tag">루틴</span> {routine.exercise} :{" "}
-            {routine.time}분
+        <li className="h-full px-2 text-[12px] flex justify-between items-center shadow-[4px_4px_4px_rgba(0,0,0,0.2)]">
+          <div className="flex justify-beetween items-center gap-2">
+            <span className="px-2 rounded-lg text-[12px] text-white bg-[tomato]">
+              루틴
+            </span>{" "}
+            <div className="text-[16px]">
+              {routine.exercise} : {routine.time}분
+            </div>
           </div>
-          <button onClick={() => dispatch(deleteRoutine(routine.id))}>
+          <button
+            className="text-[16px]"
+            onClick={() => dispatch(deleteRoutine(routine.id))}
+          >
             ❌
           </button>
         </li>
