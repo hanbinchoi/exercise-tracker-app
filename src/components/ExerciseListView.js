@@ -1,6 +1,5 @@
 import { useDispatch, useSelector } from "react-redux";
 import { deleteExercise } from "../redux/exerciseSlice";
-import "./ExerciseListView.css";
 import RoutineItem from "./RoutineItem";
 function ExerciseListView({ date }) {
   const data = useSelector((state) => state.exercise.value);
@@ -18,17 +17,20 @@ function ExerciseListView({ date }) {
   const dispatch = useDispatch();
   return (
     <>
-      <div className="todo">Todo.</div>
-      <ul className="exercise-container">
+      <div className="text-xl font-bold text-[#ADDE7D] mt-2  w-min pt-2 ml-2 ">Todo</div>
+      <ul className="overflow-y-auto h-full">
         {idx < 0
           ? null
           : routine[idx % routine.length] !== undefined && (
-              <RoutineItem routine={routine[idx % routine.length]} />
-            )}
+            <RoutineItem routine={routine[idx % routine.length]} />
+          )}
         {data
           .filter((ele) => ele.date === date)
           .map((ele) => (
-            <li key={ele.id}>
+            <li
+              key={ele.id}
+              className="h-14 bg-white flex justify-between items-center my-2 text-sm text-gray-500 rounded-md mr-2 px-5 shadow-inner border"
+            >
               {ele.exercise}: {ele.time}분
               <button onClick={() => dispatch(deleteExercise(ele.id))}>
                 ❌
