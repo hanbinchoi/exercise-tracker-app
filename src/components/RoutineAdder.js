@@ -11,16 +11,18 @@ function RoutineAdder({ footer }) {
   return (
     <div>
       {footer ? (
-        <button
-          className="w-[40px] h-[40px]"
-          style={{
-            backgroundImage: `url('/images/AddBtn.png')`, // 배경 이미지
-            backgroundPosition: "center", // 이미지 위치
-            backgroundSize: "cover", // 이미지 꽉차게
-            backgroundRepeat: "no-repeat", // 이미지 반복 지정
-          }}
-          onClick={() => dispatch(openModal())}
-        />
+        <div className="flex justify-center items-center">
+          <button
+            className="w-[38px] h-[38px]"
+            style={{
+              backgroundImage: `url('/images/AddBtn.png')`, // 배경 이미지
+              backgroundPosition: "center", // 이미지 위치
+              backgroundSize: "cover", // 이미지 꽉차게
+              backgroundRepeat: "no-repeat", // 이미지 반복 지정
+            }}
+            onClick={() => dispatch(openModal())}
+          />
+        </div>
       ) : (
         <>
           <button
