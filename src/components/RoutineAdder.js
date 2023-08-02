@@ -1,10 +1,9 @@
 import { useState } from "react";
 import ModalPortal from "./modal/ModalPortal";
 import RoutineModal from "./modal/RoutineModal";
-import "./RoutineAdder.css";
 import { useDispatch, useSelector } from "react-redux";
 import { openModal } from "../redux/modalSlice";
-
+import { FaPlusCircle } from "react-icons/fa";
 function RoutineAdder({ footer }) {
   const modal = useSelector((state) => state.modal.value);
   const dispatch = useDispatch();
@@ -12,23 +11,30 @@ function RoutineAdder({ footer }) {
   return (
     <div>
       {footer ? (
-        <button
-          className="w-[40px] h-[40px]"
-          style={{
-            backgroundImage: `url('/images/AddBtn.png')`, // 배경 이미지
-            backgroundPosition: "center", // 이미지 위치
-            backgroundSize: "cover", // 이미지 꽉차게
-            backgroundRepeat: "no-repeat", // 이미지 반복 지정
-          }}
-          onClick={() => dispatch(openModal())}
-        />
+        <div className="flex justify-center items-center">
+          <button
+            className="w-[38px] h-[38px]"
+            style={{
+              backgroundImage: `url('/images/AddBtn.png')`, // 배경 이미지
+              backgroundPosition: "center", // 이미지 위치
+              backgroundSize: "cover", // 이미지 꽉차게
+              backgroundRepeat: "no-repeat", // 이미지 반복 지정
+            }}
+            onClick={() => dispatch(openModal())}
+          />
+        </div>
       ) : (
-        <button
-          className="add-routine-btn"
-          onClick={() => dispatch(openModal())}
-        >
-          루틴 추가하기
-        </button>
+        <>
+          <button
+            className="w-full h-[70px] py-3 rounded-md text-white font-bold bg-[#98F5A4] flex justify-center items-center"
+            onClick={() => dispatch(openModal())}
+          >
+            <FaPlusCircle color="#fff" size="50" />
+          </button>
+          <div className="my-1 text-slate-600 text-[12px] text-center">
+            루틴은 최대 7개까지 생성 가능합니다.
+          </div>
+        </>
       )}
       {modal && (
         <ModalPortal>

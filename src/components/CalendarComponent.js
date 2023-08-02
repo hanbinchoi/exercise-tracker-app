@@ -5,6 +5,7 @@ import styled from "styled-components";
 
 const CalendarContainer = styled.div`
   > .react-calendar {
+    height: 20rem;
     height:auto;
     display: flex;
     flex-direction: column;
