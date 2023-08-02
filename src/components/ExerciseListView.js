@@ -17,7 +17,7 @@ function ExerciseListView({ date }) {
   const dispatch = useDispatch();
   return (
     <>
-      <div className="text-xl font-bold text-[#ADDE7D] my-2 mx-auto border w-min py-2 px-10 shadow-inner rounded-md bg-[#FDF6E6]">Todo</div>
+      <div className="text-xl font-bold text-[#ADDE7D] mt-2  w-min pt-2 ml-2 ">Todo</div>
       <ul className="overflow-y-auto h-full">
         {idx < 0
           ? null
