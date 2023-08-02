@@ -1,16 +1,24 @@
 import moment from "moment";
 import CalendarLib from "react-calendar";
 import { useSelector } from "react-redux";
-import "./CalendarComponent.css";
 import styled from "styled-components";
 
 const CalendarContainer = styled.div`
   > .react-calendar {
-    height:20rem;
-    margin-top: 30px;
+    height:auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    padding : 10px;
+    background-color:white;
+    border-radius:5px;
     // yyyy-mm 페이지 부분
     > .react-calendar__navigation {
       height: 50px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      padding-bottom: 4px;
       > .react-calendar__navigation__arrow {
         width: 50px;
       }
@@ -19,6 +27,9 @@ const CalendarContainer = styled.div`
           font-size: 15px;
           font-weight: bold;
           padding: 10px 30px;
+          background-color: #adde7d;
+          color: #ffffff;
+          border-radius: 4px;
         }
       }
     }
@@ -31,6 +42,9 @@ const CalendarContainer = styled.div`
           > div {
             // 요일 부분
             > .react-calendar__month-view__weekdays {
+              text-align: center;
+              padding: 2.5 4.5;
+              margin: 13.3px 0;
               > .react-calendar__month-view__weekdays__weekday {
                 // 요일에 기본값인 도트 밑줄 지워주기
                 > abbr {
@@ -44,10 +58,39 @@ const CalendarContainer = styled.div`
             }
             // 일자 부분
             > .react-calendar__month-view__days {
+              /* 달력 day 타일 한개 모양 */
+              > .react-calendar__tile {
+                color: #616161;
+                background: none;
+                border: none;
+                text-align: center;
+                padding: 4.5px;
+                margin-bottom: 13.3px;
+                font-size: 11px;
+              }
               > .react-calendar__month-view__days__day--weekend {
                 color: red;
               }
-            }
+              /* 마크할 날짜들 */
+              > .highlight {
+                border: 2px solid #adde7d;
+                border-radius: 10px;
+              }
+              /* 현재 달을 벗어난 day */
+              > .react-calendar__month-view__days__day--neighboringMonth {
+                opacity: 0.5;
+              }
+              /* 선택된 날짜 */
+              > .react-calendar__tile--active {
+                border:2px solid #3C8F64;
+                border-radius: 10px;
+                background-color: #D1FBA8;
+              }
+              /* 달력 오늘 표시 변경 */
+              > .react-calendar__tile--now {
+                background: #adde7d;
+              }
+            } 
           }
         }
       }
