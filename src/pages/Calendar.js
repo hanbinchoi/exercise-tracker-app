@@ -13,13 +13,15 @@ const Calendar = () => {
 
   return (
     <main className="pt-16 w-80 h-[800px] border-2 border-[#E6E6E6]">
-      <div className="border-b border-[#E6E6E6]">
+      <div className="mt-4 border-b border-[#E6E6E6]">
         <CalendarComponent
           date={date}
           onDateChange={onDateChange}
         />
       </div>
-      <ExerciseListView date={date} />
+      <div className="h-2/5 mt-2 pl-2">
+        <ExerciseListView date={date} />
+      </div>
     </main>
   );
 };

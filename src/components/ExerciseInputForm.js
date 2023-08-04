@@ -68,23 +68,26 @@ function ExerciseInputForm({ date, routine }) {
   };
   return (
     <form onSubmit={handleSubmit}>
-      <div className="mb-[10px] w-full grid grid-cols-[7fr,2fr] gap-4">
-        <Input
-          required={true}
-          type="text"
-          placeholder={"운동명 입력"}
-          value={exerciseBind}
-        />
-        <button
-          className="w-full flex justify-center items-center"
-          onClick={handleClickExerciseList}
-        >
-          {isShowDropdown ? (
-            <FaCaretUp size={"30px"} />
-          ) : (
-            <FaCaretDown size={"30px"} />
-          )}
-        </button>{" "}
+      <div className=" w-full">
+        <div className="flex mb-2.5">
+          <Input
+            required={true}
+            type="text"
+            placeholder={"운동명 입력"}
+            value={exerciseBind}
+          />
+          <button
+            className="w-28 flex items-center justify-center bg-[#ADDE7D] overflow-hidden rounded-r-md text-white"
+            onClick={handleClickExerciseList}
+          >
+            {isShowDropdown ? (
+              <FaCaretUp size={"30px"} />
+            ) : (
+              <FaCaretDown size={"30px"} />
+            )}
+          </button>
+        </div>
+
         {isShowDropdown ? (
           <div className="h-[250px] overflow-scroll">
             <Exercise handleExerciseClick={handleExerciseClick} />
@@ -92,16 +95,18 @@ function ExerciseInputForm({ date, routine }) {
         ) : null}
       </div>
 
-      <div className="w-full grid grid-cols-[7fr,2fr] gap-4">
+      <div className="w-full flex">
         <Input
           required={true}
           type="number"
           placeholder={"시간 입력"}
           value={timeBind}
         />
-        <button className="bg-[#ADDE7D] text-white font-bold rounded-md">
+
+        <button className="w-28 flex items-center justify-center bg-[#ADDE7D] text-white font-bold rounded-r-md">
           입력
         </button>
+
       </div>
     </form>
   );
