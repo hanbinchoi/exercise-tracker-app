@@ -25,10 +25,10 @@ function RoutineItem({ routine, footer, idx }) {
           {idx + 1}
         </li>
       ) : (
-        <li className="h-full px-2 text-[12px] flex justify-between items-center shadow-[4px_4px_4px_rgba(0,0,0,0.2)]">
+        <li className="h-14 bg-white flex justify-between items-center text-sm text-gray-500 rounded-md mr-2 my-2 px-5 py-10 shadow-inner border">
           <div className="flex justify-beetween items-center gap-2">
             <span
-              className={`px-2 rounded-lg text-[12px] text-white font-bold`}
+              className={`py-1 px-2 rounded-lg text-sm text-white font-bold`}
               style={{
                 backgroundColor: `${itemColors[idx]}`,
               }}
@@ -36,8 +36,9 @@ function RoutineItem({ routine, footer, idx }) {
               {"루틴"}
               {idx + 1}
             </span>
-            <div className="text-[16px]">
-              {routine.exercise} : {routine.time}분
+            <div className="text-[16px] ml-4 w-32">
+              <h1 className="font-bold text-black"> {routine.exercise} </h1>
+              <h1> {routine.time}분 </h1>
             </div>
           </div>
           <button
