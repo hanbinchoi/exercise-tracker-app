@@ -4,6 +4,7 @@ import { useSelector } from "react-redux";
 import styled from "styled-components";
 
 const CalendarContainer = styled.div`
+  font-weight:bold;
   > .react-calendar {
     height: 20rem;
     height:auto;
@@ -22,10 +23,13 @@ const CalendarContainer = styled.div`
       padding-bottom: 4px;
       > .react-calendar__navigation__arrow {
         width: 50px;
+        font-size:30px;
+        padding-bottom:4px;
+        color:#777;
       }
       > .react-calendar__navigation__label {
         > span {
-          font-size: 15px;
+          font-size: 18px;
           font-weight: bold;
           padding: 10px 30px;
           background-color: #adde7d;
@@ -46,6 +50,7 @@ const CalendarContainer = styled.div`
               text-align: center;
               padding: 2.5 4.5;
               margin: 13.3px 0;
+              font-size:18px;
               > .react-calendar__month-view__weekdays__weekday {
                 // 요일에 기본값인 도트 밑줄 지워주기
                 > abbr {
@@ -64,10 +69,11 @@ const CalendarContainer = styled.div`
                 color: #616161;
                 background: none;
                 border: none;
+                border-radius: 10px;
                 text-align: center;
                 padding: 4.5px;
                 margin-bottom: 13.3px;
-                font-size: 11px;
+                font-size: 14px;
               }
               > .react-calendar__month-view__days__day--weekend {
                 color: red;
@@ -91,6 +97,7 @@ const CalendarContainer = styled.div`
               > .react-calendar__tile--now {
                 background: #adde7d;
               }
+              
             } 
           }
         }
