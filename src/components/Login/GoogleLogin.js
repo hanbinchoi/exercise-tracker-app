@@ -1,3 +1,5 @@
+import GoogleUserInfo from "./GoogleUserInfo";
+
 const SocialGoogle = () => {
     // API, URI 받아 오기
     // URL 설정
