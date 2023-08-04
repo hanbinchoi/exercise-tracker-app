@@ -18,13 +18,15 @@ function ExerciseListView({ date }) {
   const dispatch = useDispatch();
   return (
     <>
-      <div className="text-xl font-bold text-[#ADDE7D] mt-2  w-min pt-2 ml-2 ">Todo</div>
+      <div className="text-xl font-bold text-[#ADDE7D] mt-2  w-min pt-2 ml-2 ">
+        Todo
+      </div>
       <ul className="overflow-y-auto h-full">
         {idx < 0
           ? null
           : routine[idx % routine.length] !== undefined && (
-            <RoutineItem routine={routine[idx % routine.length]} />
-          )}
+              <RoutineItem routine={routine[idx % routine.length]} idx={idx} />
+            )}
         {data
           .filter((ele) => ele.date === date)
           .map((ele) => (
