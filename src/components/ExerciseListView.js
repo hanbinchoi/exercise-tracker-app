@@ -5,6 +5,7 @@ import RoutineItem from "./RoutineItem";
 function ExerciseListView({ date }) {
   const data = useSelector((state) => state.exercise.value);
   const routine = useSelector((state) => state.routine.value);
+  console.log(routine);
   const start = new Date(
     routine[0]?.start[0],
     routine[0]?.start[1],

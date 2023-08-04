@@ -38,6 +38,7 @@ function ExerciseInputForm({ date, routine }) {
         dispatch(
           addRoutine({
             id: new Date().getTime() + Math.random(),
+            start: routineData[0].start,
             idx: routineData.length,
             exercise,
             time,
