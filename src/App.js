@@ -14,6 +14,7 @@ import Settings from "./pages/Settings";
 import MyInfo from "./pages/MyInfo";
 import KakaoUserInfo from "./components/Login/KaKaoUserInfo";
 import { useState } from "react";
+import GoogleUserInfo from "./components/Login/GoogleUserInfo";
 
 function App() {
   // Header와 Footer가 보여질 페이지 경로 목록
@@ -56,7 +57,7 @@ function App() {
       {isLogin === false ? (
         <KakaoUserInfo isLogin={isLogin} setIsLogin={setIsLogin} />
       ) : null}
-
+      <GoogleUserInfo />
       {/* 조건부로 Footer를 렌더링 */}
       {showHeaderFooter() && <Footer />}
     </div>
