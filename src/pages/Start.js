@@ -4,9 +4,9 @@ import { Link } from 'react-router-dom';
 
 const Start = () => {
     return (
-        <main className="w-80 h-[800px] bg-[#FDF6E6] relative top-0 left-0 z-0">
+        <main className="w-80 h-[800px] bg-[#FDF6E6] flex flex-col">
             <div
-                className="flex"
+                className="flex items-end justify-center"
                 style={{
                     backgroundImage: `url('/images/StartBackground.png')`, // 배경 이미지
                     backgroundPosition: "center", // 이미지 위치
@@ -15,8 +15,8 @@ const Start = () => {
                     height: '710px'
                 }}>
                 <Link to="/login">
-                    <button className="w-72 h-20 absolute left-2.5 top-[590px] bg-[#ADDE7D] rounded-2xl ">
-                        <span className="text-[30px] font-bold ">Start</span>
+                    <button className="w-72 h-20 bg-[#ADDE7D] rounded-2xl ">
+                        <span className="text-3xl font-bold ">Start</span>
                     </button>
                 </Link>
 

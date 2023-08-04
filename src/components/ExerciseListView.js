@@ -30,10 +30,17 @@ function ExerciseListView({ date }) {
           .map((ele) => (
             <li
               key={ele.id}
-              className="h-14 bg-white flex justify-between items-center my-2 text-sm text-gray-500 rounded-md mr-2 px-5 shadow-inner border"
+              className="relative h-14 bg-white flex  items-center my-2 text-sm text-gray-500 rounded-md mr-2 px-5 shadow-inner border"
             >
-              {ele.exercise}: {ele.time}분
-              <button onClick={() => dispatch(deleteExercise(ele.id))}>
+              <h1 className="text-base font-bold text-black">{ele.exercise}</h1>
+              <h1 className="text-base font-bold text-black px-2"> : </h1>
+              <h1 className="text-base">{ele.time}분</h1>
+
+              <button
+                className="text-base absolute right-5"
+                onClick={() => dispatch(deleteExercise(ele.id))
+
+                }>
                 ❌
               </button>
             </li>

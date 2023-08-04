@@ -68,8 +68,8 @@ function ExerciseInputForm({ date, routine }) {
   };
   return (
     <form onSubmit={handleSubmit}>
-      <div className=" w-full">
-        <div className="flex mb-2.5">
+      <div className=" w-full overflow-hidden text-lg">
+        <div className="flex mb-4">
           <Input
             required={true}
             type="text"
@@ -95,7 +95,7 @@ function ExerciseInputForm({ date, routine }) {
         ) : null}
       </div>
 
-      <div className="w-full flex">
+      <div className="w-full flex text-lg">
         <Input
           required={true}
           type="number"

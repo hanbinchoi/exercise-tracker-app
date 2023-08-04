@@ -24,13 +24,14 @@ function RoutineItem({ routine, footer, idx }) {
           {routine.exercise.slice(0, 2)}
         </li>
       ) : (
-        <li className="h-full px-2 text-[12px] flex justify-between items-center shadow-[4px_4px_4px_rgba(0,0,0,0.2)]">
-          <div className="flex justify-beetween items-center gap-2">
-            <span className="px-2 rounded-lg text-[12px] text-white bg-[tomato]">
+        <li className="h-14 bg-white flex justify-between items-center my-2 text-sm text-gray-500 rounded-md mr-2 px-5 shadow-inner border">
+          <div className="flex justify-beetween items-center">
+            <span className="py-1 px-2 rounded-lg font-bold text-sm text-white bg-[tomato]">
               루틴
             </span>{" "}
-            <div className="text-[16px]">
-              {routine.exercise} : {routine.time}분
+            <div className="text-[16px] ml-4 w-32">
+              <h1 className="font-bold text-black"> {routine.exercise} </h1>
+              <h1> {routine.time}분 </h1>
             </div>
           </div>
           <button
