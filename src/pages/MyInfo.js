@@ -1,5 +1,5 @@
 // 내 정보 보기
-import React, { useEffect, useState } from "react";
+import React, { useState } from "react";
 import { Link } from "react-router-dom";
 
 const MyInfo = () => {
@@ -11,6 +11,14 @@ const MyInfo = () => {
   const localHeight = localStorage.getItem("height");
   const localWeight = localStorage.getItem("weight");
 
+  const ages = Array.from({ length: 100 }, (_, index) => index);
+  const name = sessionStorage.getItem("username");
+  // 성별, 나이, 키, 체중 상태 저장
+  const [gender, setGender] = useState(localGender || "");
+  const [age, setAge] = useState(parseInt(localAge) || 0);
+  const [height, setHeight] = useState(localHeight || "");
+  const [weight, setWeight] = useState(localWeight || "");
+
   // 로그아웃 시 정보 초기화
   const logout = () => {
     sessionStorage.setItem("username", "");
@@ -20,17 +28,8 @@ const MyInfo = () => {
     localStorage.setItem("weight", "");
   };
 
-  // 입력 값 반영
-  const hasLocalValue = () => {
-    setAge(localAge ? localAge : 0);
-    setGender(localGender ? localGender : "");
-    setHeight(localHeight ? localHeight : "");
-    setWeight(localWeight ? localHeight : "");
-  };
-  useEffect(() => {
-    hasLocalValue();
-  }, []);
   // 성별, 나이, 키, 체중 상태 저장 후 유지
+
   const saveInfo = () => {
     localStorage.setItem("gender", gender);
     localStorage.setItem("age", age);
@@ -78,7 +77,8 @@ const MyInfo = () => {
             className="text-[10px] font-thin underline decoration-1 text-stone-400 mt-[15px]"
             onClick={logout}
           >
-            로그아웃
+            {" "}
+            로그아웃{" "}
           </button>
         </Link>
       </div>
@@ -89,8 +89,8 @@ const MyInfo = () => {
             onClick={() => genderChange("여자")}
             className={`rounded-xl px-5 py-3 text-base font-medium 
                         ${
-                          localGender === "여자"
-                            ? "transition duration-200 hover:bg-[#FDF6E6] active:bg-[#fae2ab] focus:ring-2"
+                          gender === "여자"
+                            ? "transition duration-200 bg-[#fae2ab] focus:ring-2 hover:bg-[#FDF6E6] "
                             : ""
                         }`}
           >
@@ -102,8 +102,8 @@ const MyInfo = () => {
             onClick={() => genderChange("남자")}
             className={`rounded-xl px-5 py-3 text-base font-medium 
                         ${
-                          localGender === "남자"
-                            ? "transition duration-200 hover:bg-[#FDF6E6] active:bg-[#fae2ab] focus:ring-2"
+                          gender === "남자"
+                            ? "transition duration-200 bg-[#fae2ab] focus:ring-2 hover:bg-[#FDF6E6] "
                             : ""
                         }`}
           >
@@ -121,9 +121,9 @@ const MyInfo = () => {
             value={age}
             onChange={ageChange}
           >
-            {ages.map((age) => (
-              <option key={age} value={age}>
-                {age}
+            {ages.map((localAge) => (
+              <option key={localAge} value={localAge}>
+                {localAge}
               </option>
             ))}
           </select>
