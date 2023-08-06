@@ -28,7 +28,7 @@ function LandingPage() {
             placeholder="지역명 + 헬스장"
             onChange={onChange}
             value={InputText}
-            className=' w-[100%] h-[100%] '
+            className=' w-[100%] h-[100%] p-2.5'
           />
           <button
             type="submit"

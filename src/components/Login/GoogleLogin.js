@@ -16,7 +16,7 @@ const SocialGoogle = () => {
         <>
             <button
                 onClick={GoogleLogin}
-                className="cursor-not-allowed "
+                className="text-xl font-bold mx-5"
             >구글 로그인</button>
         </>
     )

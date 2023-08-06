@@ -22,11 +22,11 @@ const ToRecord = () => {
     setIsShowCalendar(!isShowCalendar);
   };
   return (
-    <main className="w-80 h-[800px] bg-[#ffffff] absolute top-0 left-0 border-2 border-[#E6E6E6] z-0 ">
-      <div className="px-[10px] absolute top-[80px] w-[100%]">
+    <main className="w-80 h-[800px] bg-[#ffffff] flex flex-col border-2 border-[#E6E6E6]">
+      <div className="px-2.5 mt-20 w-full flex flex-col">
         <ExerciseInputForm date={date} />
         <button
-          className="bg-[#ADDE7D] p-[20px] rounded-2xl "
+          className="bg-[#ADDE7D] mt-4 mx-auto py-4 px-10 rounded-2xl font-bold text-lg text-stone-600"
           onClick={handleCalendarView}
         >
           날짜 선택하기
