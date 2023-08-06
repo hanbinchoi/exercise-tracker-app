@@ -1,15 +1,15 @@
 // 내 정보 보기
 import React, { useState } from "react";
-import {Link} from "react-router-dom";
+import { Link } from "react-router-dom";
 
 const MyInfo = () => {
   // 0부터 99까지의 숫자 배열 생성
 
-    // 로컬스토리지 저장된 데이터 
-    const localGender = localStorage.getItem('gender');
-    const localAge = localStorage.getItem('age');
-    const localHeight = localStorage.getItem('height');
-    const localWeight = localStorage.getItem('weight');
+  // 로컬스토리지 저장된 데이터
+  const localGender = localStorage.getItem("gender");
+  const localAge = localStorage.getItem("age");
+  const localHeight = localStorage.getItem("height");
+  const localWeight = localStorage.getItem("weight");
 
   const ages = Array.from({ length: 100 }, (_, index) => index);
   const name = sessionStorage.getItem("username");
@@ -19,25 +19,22 @@ const MyInfo = () => {
   const [height, setHeight] = useState(localHeight || "");
   const [weight, setWeight] = useState(localWeight || "");
 
-
-  
   // 로그아웃 시 정보 초기화
   const logout = () => {
-    sessionStorage.setItem('username','')
-    localStorage.setItem('gender','')
-    localStorage.setItem('age','')
-    localStorage.setItem('height','')
-    localStorage.setItem('weight','')
-  }
-  
+    sessionStorage.setItem("username", "");
+    localStorage.setItem("gender", "");
+    localStorage.setItem("age", "");
+    localStorage.setItem("height", "");
+    localStorage.setItem("weight", "");
+  };
 
   // 성별, 나이, 키, 체중 상태 저장 후 유지
 
   const saveInfo = () => {
-    localStorage.setItem('gender',gender);
-    localStorage.setItem('age',age);
-    localStorage.setItem('height',height);
-    localStorage.setItem('weight',weight);
+    localStorage.setItem("gender", gender);
+    localStorage.setItem("age", age);
+    localStorage.setItem("height", height);
+    localStorage.setItem("weight", weight);
   };
 
   const genderChange = (e) => {
@@ -76,10 +73,13 @@ const MyInfo = () => {
           {name}
         </span>
         <Link to="/">
-        <button className="text-[10px] font-thin underline decoration-1 text-stone-400 mt-[15px]" onClick={logout}>
-          {" "}
-          로그아웃{" "}
-        </button>
+          <button
+            className="text-[10px] font-thin underline decoration-1 text-stone-400 mt-[15px]"
+            onClick={logout}
+          >
+            {" "}
+            로그아웃{" "}
+          </button>
         </Link>
       </div>
       <ul className=" w-[300px] h-[300px] px-[20px] py-[20px] flex flex-col justify-between border-2 border-[#E6E6E6] rounded-lg mt-[40px]">
@@ -152,7 +152,12 @@ const MyInfo = () => {
       </ul>
       {/* 저장하기 버튼 */}
       <div>
-        <button className="w-[80px] h-[30px] mt-5 rounded-2xl bg-[#A5D6A7] text-[white] font-bold" onClick={saveInfo}>저장하기</button>
+        <button
+          className="w-[80px] h-[30px] mt-5 rounded-2xl bg-[#A5D6A7] text-[white] font-bold"
+          onClick={saveInfo}
+        >
+          저장하기
+        </button>
       </div>
     </main>
   );
