@@ -83,16 +83,15 @@ const MyInfo = () => {
         </Link>
       </div>
       <ul className=" w-[300px] h-[300px] px-[20px] py-[20px] flex flex-col justify-between border-2 border-[#E6E6E6] rounded-lg mt-[40px]">
-        <li className="mb-[10px]">
+        <li className="mb-[10px] px-10">
           <span>성별 : </span>
           <button
             onClick={() => genderChange("여자")}
-            className={`rounded-xl px-5 py-3 text-base font-medium 
-                        ${
-                          gender === "여자"
-                            ? "transition duration-200 bg-[#fae2ab] focus:ring-2 hover:bg-[#FDF6E6] "
-                            : ""
-                        }`}
+            className={`rounded-xl px-3 py-3 text-base 
+                        ${gender === "여자"
+                ? "transition duration-200 bg-[#fae2ab] focus:ring-2 hover:bg-[#FDF6E6] font-bold "
+                : ""
+              }`}
           >
             {" "}
             여자{" "}
@@ -100,60 +99,66 @@ const MyInfo = () => {
 
           <button
             onClick={() => genderChange("남자")}
-            className={`rounded-xl px-5 py-3 text-base font-medium 
-                        ${
-                          gender === "남자"
-                            ? "transition duration-200 bg-[#fae2ab] focus:ring-2 hover:bg-[#FDF6E6] "
-                            : ""
-                        }`}
+            className={`rounded-xl px-5 py-3 text-base 
+                        ${gender === "남자"
+                ? "transition duration-200 bg-[#fae2ab] focus:ring-2 hover:bg-[#FDF6E6] font-bold"
+                : ""
+              }`}
           >
             {" "}
             남자{" "}
           </button>
         </li>
-        <li className="mb-[10px]">
+        <li className="mb-2.5 flex justify-between px-10 items-center">
           <label htmlFor="ageSelect" className="mr-2">
             나이 :
           </label>
-          <select
-            id="ageSelect"
-            className="border rounded p-1"
-            value={age}
-            onChange={ageChange}
-          >
-            {ages.map((localAge) => (
-              <option key={localAge} value={localAge}>
-                {localAge}
-              </option>
-            ))}
-          </select>
-          <span>세</span>
+          <div>
+            <select
+              id="ageSelect"
+              className="border rounded p-1 mx-3"
+              value={age}
+              onChange={ageChange}
+            >
+              {ages.map((localAge) => (
+                <option key={localAge} value={localAge}>
+                  {localAge}
+                </option>
+              ))}
+            </select>
+            <span>세</span>
+          </div>
         </li>
-        <li className="mb-[10px]">
+        <li className="mb-2.5 flex justify-between px-10">
           <span>키 :</span>
-          <input
-            placeholder="키를 입력하세요."
-            className="w-[35px] ml-3"
-            value={height}
-            onChange={heightChange}
-          />
-          <span>cm</span>
+          <div>
+            <input
+              placeholder="입력창"
+              className="w-12 mx-3"
+              value={height}
+              onChange={heightChange}
+            />
+            <span>cm</span>
+          </div>
+
         </li>
-        <li className="mb-[10px]">
+        <li className="mb-2.5 flex justify-between px-10">
           <span>체중 :</span>
-          <input
-            placeholder="체중을 입력하세요."
-            className="w-[35px] ml-3"
-            value={weight}
-            onChange={weightChange}
-          />
-          <span>kg</span>
+          <div>
+            <input
+              placeholder="입력창"
+              className="w-12 mx-3"
+              value={weight}
+              onChange={weightChange}
+            />
+            <span>kg</span>
+          </div>
         </li>
       </ul>
       {/* 저장하기 버튼 */}
       <div>
         <button
-          className="w-[80px] h-[30px] mt-5 rounded-2xl bg-[#A5D6A7] text-[white] font-bold"
+          className="w-36 h-12 mt-5 rounded-2xl bg-[#A5D6A7] text-[white] font-bold"
           onClick={saveInfo}
         >
           저장하기
