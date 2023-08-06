@@ -11,8 +11,8 @@ const ExerciseRoutine = () => {
     <main className="w-80 h-[800px] bg-[#ffffff] absolute top-0 left-0 border-2 border-[#E6E6E6]">
       <div className="h-[600px] mt-[80px] px-[20px] grid grid-cols-1 grid-rows-[repeat(7,75px)] gap-5">
         {routines.length < 7 ? <RoutineAdder /> : null}
-        {routines.map((ele) => (
-          <RoutineItem key={ele.id} routine={ele} />
+        {routines.map((ele, idx) => (
+          <RoutineItem key={ele.id} routine={ele} idx={idx} />
         ))}
       </div>
     </main>
