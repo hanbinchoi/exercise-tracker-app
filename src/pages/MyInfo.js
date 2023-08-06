@@ -4,19 +4,22 @@ import {Link} from "react-router-dom";
 
 const MyInfo = () => {
   // 0부터 99까지의 숫자 배열 생성
+
+    // 로컬스토리지 저장된 데이터 
+    const localGender = localStorage.getItem('gender');
+    const localAge = localStorage.getItem('age');
+    const localHeight = localStorage.getItem('height');
+    const localWeight = localStorage.getItem('weight');
+
   const ages = Array.from({ length: 100 }, (_, index) => index);
   const name = sessionStorage.getItem("username");
   // 성별, 나이, 키, 체중 상태 저장
-  const [gender, setGender] = useState("");
-  const [age, setAge] = useState(0);
-  const [height, setHeight] = useState("");
-  const [weight, setWeight] = useState("");
+  const [gender, setGender] = useState(localGender || "");
+  const [age, setAge] = useState(parseInt(localAge) || 0);
+  const [height, setHeight] = useState(localHeight || "");
+  const [weight, setWeight] = useState(localWeight || "");
 
-  // 로컬스토리지 저장된 데이터 
-  const localGender = localStorage.getItem('gender');
-  const localAge = localStorage.getItem('age');
-  const localHeight = localStorage.getItem('height');
-  const localWeight = localStorage.getItem('weight');
+
   
   // 로그아웃 시 정보 초기화
   const logout = () => {
@@ -86,8 +89,8 @@ const MyInfo = () => {
             onClick={() => genderChange("여자")}
             className={`rounded-xl px-5 py-3 text-base font-medium 
                         ${
-                          localGender === "여자"
-                            ? "transition duration-200 hover:bg-[#FDF6E6] active:bg-[#fae2ab] focus:ring-2"
+                          gender === "여자"
+                            ? "transition duration-200 bg-[#fae2ab] focus:ring-2 hover:bg-[#FDF6E6] "
                             : ""
                         }`}
           >
@@ -99,8 +102,8 @@ const MyInfo = () => {
             onClick={() => genderChange("남자")}
             className={`rounded-xl px-5 py-3 text-base font-medium 
                         ${
-                          localGender === "남자"
-                            ? "transition duration-200 hover:bg-[#FDF6E6] active:bg-[#fae2ab] focus:ring-2"
+                          gender === "남자"
+                            ? "transition duration-200 bg-[#fae2ab] focus:ring-2 hover:bg-[#FDF6E6] "
                             : ""
                         }`}
           >
@@ -115,7 +118,7 @@ const MyInfo = () => {
           <select
             id="ageSelect"
             className="border rounded p-1"
-            value={localAge}
+            value={age}
             onChange={ageChange}
           >
             {ages.map((localAge) => (
@@ -130,7 +133,7 @@ const MyInfo = () => {
           <span>키 :</span>
           <input
             placeholder="키를 입력하세요."
-            className="w-[170px] "
+            className="w-[35px] ml-3"
             value={height}
             onChange={heightChange}
           />
@@ -140,7 +143,7 @@ const MyInfo = () => {
           <span>체중 :</span>
           <input
             placeholder="체중을 입력하세요."
-            className="w-[170px]"
+            className="w-[35px] ml-3"
             value={weight}
             onChange={weightChange}
           />
@@ -149,7 +152,7 @@ const MyInfo = () => {
       </ul>
       {/* 저장하기 버튼 */}
       <div>
-        <button onClick={saveInfo}>저장하기</button>
+        <button className="w-[80px] h-[30px] mt-5 rounded-2xl bg-[#A5D6A7] text-[white] font-bold" onClick={saveInfo}>저장하기</button>
       </div>
     </main>
   );
