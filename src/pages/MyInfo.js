@@ -1,6 +1,6 @@
 // 내 정보 보기
-import React, { useState } from "react";
-import {Link} from "react-router-dom";
+import React, { useEffect, useState } from "react";
+import { Link } from "react-router-dom";
 
 const MyInfo = () => {
   // 0부터 99까지의 숫자 배열 생성
@@ -12,29 +12,36 @@ const MyInfo = () => {
   const [height, setHeight] = useState("");
   const [weight, setWeight] = useState("");
 
-  // 로컬스토리지 저장된 데이터 
-  const localGender = localStorage.getItem('gender');
-  const localAge = localStorage.getItem('age');
-  const localHeight = localStorage.getItem('height');
-  const localWeight = localStorage.getItem('weight');
-  
+  // 로컬스토리지 저장된 데이터
+  const localGender = localStorage.getItem("gender");
+  const localAge = localStorage.getItem("age");
+  const localHeight = localStorage.getItem("height");
+  const localWeight = localStorage.getItem("weight");
   // 로그아웃 시 정보 초기화
   const logout = () => {
-    sessionStorage.setItem('username','')
-    localStorage.setItem('gender','')
-    localStorage.setItem('age','')
-    localStorage.setItem('height','')
-    localStorage.setItem('weight','')
-  }
-  
+    sessionStorage.setItem("username", "");
+    localStorage.setItem("gender", "");
+    localStorage.setItem("age", "");
+    localStorage.setItem("height", "");
+    localStorage.setItem("weight", "");
+  };
 
+  // 입력 값 반영
+  const hasLocalValue = () => {
+    setAge(localAge ? localAge : 0);
+    setGender(localGender ? localGender : "");
+    setHeight(localHeight ? localHeight : "");
+    setWeight(localWeight ? localHeight : "");
+  };
+  useEffect(() => {
+    hasLocalValue();
+  }, []);
   // 성별, 나이, 키, 체중 상태 저장 후 유지
-
   const saveInfo = () => {
-    localStorage.setItem('gender',gender);
-    localStorage.setItem('age',age);
-    localStorage.setItem('height',height);
-    localStorage.setItem('weight',weight);
+    localStorage.setItem("gender", gender);
+    localStorage.setItem("age", age);
+    localStorage.setItem("height", height);
+    localStorage.setItem("weight", weight);
   };
 
   const genderChange = (e) => {
@@ -73,10 +80,12 @@ const MyInfo = () => {
           {name}
         </span>
         <Link to="/">
-        <button className="text-[10px] font-thin underline decoration-1 text-stone-400 mt-[15px]" onClick={logout}>
-          {" "}
-          로그아웃{" "}
-        </button>
+          <button
+            className="text-[10px] font-thin underline decoration-1 text-stone-400 mt-[15px]"
+            onClick={logout}
+          >
+            로그아웃
+          </button>
         </Link>
       </div>
       <ul className=" w-[300px] h-[300px] px-[20px] py-[20px] flex flex-col justify-between border-2 border-[#E6E6E6] rounded-lg mt-[40px]">
@@ -86,8 +95,8 @@ const MyInfo = () => {
             onClick={() => genderChange("여자")}
             className={`rounded-xl px-5 py-3 text-base font-medium 
                         ${
-                          localGender === "여자"
-                            ? "transition duration-200 hover:bg-[#FDF6E6] active:bg-[#fae2ab] focus:ring-2"
+                          gender === "여자"
+                            ? "bg-[#fae2ab] transition duration-200 hover:bg-[#FDF6E6] active:bg-[#fae2ab] focus:ring-2"
                             : ""
                         }`}
           >
@@ -99,8 +108,8 @@ const MyInfo = () => {
             onClick={() => genderChange("남자")}
             className={`rounded-xl px-5 py-3 text-base font-medium 
                         ${
-                          localGender === "남자"
-                            ? "transition duration-200 hover:bg-[#FDF6E6] active:bg-[#fae2ab] focus:ring-2"
+                          gender === "남자"
+                            ? "bg-[#fae2ab] transition duration-200 hover:bg-[#FDF6E6] active:bg-[#fae2ab] focus:ring-2"
                             : ""
                         }`}
           >
@@ -115,12 +124,12 @@ const MyInfo = () => {
           <select
             id="ageSelect"
             className="border rounded p-1"
-            value={localAge}
+            value={age}
             onChange={ageChange}
           >
-            {ages.map((localAge) => (
-              <option key={localAge} value={localAge}>
-                {localAge}
+            {ages.map((age) => (
+              <option key={age} value={age}>
+                {age}
               </option>
             ))}
           </select>
