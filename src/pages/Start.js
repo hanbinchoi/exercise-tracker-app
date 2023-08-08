@@ -1,6 +1,7 @@
 // 초기화면 창
 import React from "react";
 import { Link } from 'react-router-dom';
+import startBackground from "../images/StartBackground.png";
 
 const Start = () => {
     return (
@@ -8,7 +9,7 @@ const Start = () => {
             <div
                 className="flex items-end justify-center"
                 style={{
-                    backgroundImage: `url('/images/StartBackground.png')`, // 배경 이미지
+                    backgroundImage: `url(${startBackground}')`, // 배경 이미지
                     backgroundPosition: "center", // 이미지 위치
                     backgroundSize: "cover", // 이미지 꽉차게
                     backgroundRepeat: 'no-repeat', // 이미지 반복 지정

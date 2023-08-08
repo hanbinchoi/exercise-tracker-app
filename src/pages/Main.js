@@ -13,7 +13,7 @@ const Main = () => {
     setDate(moment(date).format("YYYY-MM-DD"));
   };
   return (
-    <main className="w-80 h-[800px] bg-[#FDF6E6] relative top-0 left-0 z-0 border-2 border-[#E6E6E6] overflow-y-auto">
+    <main className="w-80 h-[800px] bg-[#FDF6E6] relative top-0 left-0 border-2 border-[#E6E6E6] overflow-y-auto">
       <div className="absolute top-16 mx-2 ">
         <div className="my-5">
           <CalendarComponent date={date} onDateChange={onDateChange} />
