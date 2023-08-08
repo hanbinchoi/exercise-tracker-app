@@ -1,4 +1,7 @@
 import React, { useEffect, useState, useRef } from "react";
+import play from "../images/iconamoon-player-play-duotone.png";
+import pause from "../images/iconamoon-player-pause-duotone.png";
+import stop from "../images/iconamoon-player-stop-duotone.png";
 
 function TimerComponents({ setIsTimer }) {
   const [isSetTime, setIsSetTime] = useState(true);
@@ -124,19 +127,19 @@ function TimerComponents({ setIsTimer }) {
         <div className="w-80 flex justify-center mb-40">
           <button className="mr-5" type="button" onClick={start}>
             <img
-              src="/images/iconamoon-player-play-duotone.png"
+              src={play}
               alt="재생버튼"
             />
           </button>
           <button className="mx-5" type="button" onClick={pauseAndResume}>
             <img
-              src="/images/iconamoon-player-pause-duotone.png"
+              src={pause}
               alt="일시정지버튼"
             />
           </button>
           <button className="ml-5" type="button" onClick={reset}>
             <img
-              src="/images/iconamoon-player-stop-duotone.png"
+              src={stop}
               alt="새로고침"
             />
           </button>

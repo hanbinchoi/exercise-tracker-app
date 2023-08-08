@@ -1,6 +1,8 @@
 import { useDispatch } from "react-redux";
 import { Link } from "react-router-dom";
 import { closeModal } from "../redux/modalSlice";
+import closeBtn from "../images/closeBtn.png";
+import userImg from "../images/userImg.png";
 
 const Cartegory = ({ setCategoryVisible }) => {
   // 카테고리 숨기기
@@ -16,7 +18,7 @@ const Cartegory = ({ setCategoryVisible }) => {
       <button
         className="w-[25px] h-[25px] absolute top-[25px] right-[20px]"
         style={{
-          backgroundImage: `url('/images/closeBtn.png')`, // 배경 이미지
+          backgroundImage: `url(${closeBtn})`, // 배경 이미지
           backgroundPosition: "center", // 이미지 위치
           backgroundSize: "cover", // 이미지 꽉차게
           backgroundRepeat: "no-repeat", // 이미지 반복 지정
@@ -29,7 +31,7 @@ const Cartegory = ({ setCategoryVisible }) => {
         <div
           className="w-[110px] h-[110px] rounded-full"
           style={{
-            backgroundImage: `url('/images/userImg.png')`, // 배경 이미지
+            backgroundImage: `url(${userImg})`, // 배경 이미지
             backgroundPosition: "center", // 이미지 위치
             backgroundSize: "cover", // 이미지 꽉차게
             backgroundRepeat: "no-repeat", // 이미지 반복 지정
