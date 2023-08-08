@@ -1,4 +1,7 @@
 import { useState, useEffect } from "react";
+import play from "../images/iconamoon-player-play-duotone.png";
+import pause from "../images/iconamoon-player-pause-duotone.png";
+import stop from "../images/iconamoon-player-stop-duotone.png";
 
 const StopWatch = () => {
   const [time, setTime] = useState(0);
@@ -37,14 +40,14 @@ const StopWatch = () => {
         <button
           className="mx-5"
           onClick={handleStartPause}>{isRunning
-            ? <img src="/images/iconamoon-player-pause-duotone.png" alt="일시정지버튼" />
-            : <img src="/images/iconamoon-player-play-duotone.png" alt="재생버튼" />
+            ? <img src={pause} alt="일시정지버튼" />
+            : <img src={play} alt="재생버튼" />
           }
         </button>
         <button
           className="mx-5"
           onClick={handleReset}>
-          <img src="/images/iconamoon-player-stop-duotone.png" alt="새로고침" />
+          <img src={stop} alt="새로고침" />
         </button>
       </div>
     </div>

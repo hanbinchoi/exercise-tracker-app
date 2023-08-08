@@ -4,6 +4,9 @@ import RoutineModal from "./modal/RoutineModal";
 import { useDispatch, useSelector } from "react-redux";
 import { openModal } from "../redux/modalSlice";
 import { FaPlusCircle } from "react-icons/fa";
+import addBtn from "../images/AddBtn.png";
+
+
 function RoutineAdder({ footer }) {
   const modal = useSelector((state) => state.modal.value);
   const dispatch = useDispatch();
@@ -15,7 +18,7 @@ function RoutineAdder({ footer }) {
           <button
             className="w-[38px] h-[38px]"
             style={{
-              backgroundImage: `url('/images/AddBtn.png')`, // 배경 이미지
+              backgroundImage: `url(${addBtn})`, // 배경 이미지
               backgroundPosition: "center", // 이미지 위치
               backgroundSize: "cover", // 이미지 꽉차게
               backgroundRepeat: "no-repeat", // 이미지 반복 지정
