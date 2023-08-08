@@ -15,6 +15,7 @@ import MyInfo from "./pages/MyInfo";
 import { useState } from "react";
 import KakaoUserInfo from "./components/Login/KaKaoUserInfo";
 import GoogleUserInfo from "./components/Login/GoogleUserInfo";
+import OAuth from "./components/OAuth";
 
 function App() {
   // Header와 Footer가 보여질 페이지 경로 목록
@@ -52,7 +53,7 @@ function App() {
         <Route path="/mapSearch" element={<MapSearch />}></Route>
         <Route path="/myInfo" element={<MyInfo />}></Route>
         <Route path="/settings" element={<Settings />}></Route>
-        <Route path="/Kakao/callback" element={<Main />}></Route>
+        <Route path="/Kakao/callback" element={<OAuth />}></Route>
         <Route path="/Oauth" element={<Main />}></Route>
       </Routes>
       {isLogin === false ? (
