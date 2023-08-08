@@ -12,8 +12,8 @@ import Timer from "./pages/Timer";
 import Calendar from "./pages/Calendar";
 import Settings from "./pages/Settings";
 import MyInfo from "./pages/MyInfo";
-import KakaoUserInfo from "./components/Login/KaKaoUserInfo";
 import { useState } from "react";
+import KakaoUserInfo from "./components/Login/KaKaoUserInfo";
 import GoogleUserInfo from "./components/Login/GoogleUserInfo";
 
 function App() {
@@ -54,10 +54,10 @@ function App() {
         <Route path="/Kakao/callback" element={<Main />}></Route>
         <Route path="/Oauth" element={<Main />}></Route>
       </Routes>
-      {isLogin === false ? (
+      {/* {isLogin === false ? (
         <KakaoUserInfo isLogin={isLogin} setIsLogin={setIsLogin} />
       ) : null}
-      <GoogleUserInfo />
+      <GoogleUserInfo /> */}
       {/* 조건부로 Footer를 렌더링 */}
       {showHeaderFooter() && <Footer />}
     </div>
