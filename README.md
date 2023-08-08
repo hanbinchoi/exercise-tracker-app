@@ -1,14 +1,13 @@
 <br>
-<img width="250px" src="public/images/Beenzinoo.png">
+<center><img width="250px" src="public/images/Beenzinoo.png"></center>
 
 ## **Project. Exercise Tracker**
->### 스터디_빈.진.우(Beenzinoo)
->****
->>**개발기간 : 2023.7.17 ~ 2023.08.08**
->>****
->>>**[Figma Link](https://www.figma.com/file/ZB9OIXLqpcUhWNcic0Q0q3/exercise-tracker-app?type=design&node-id=0%3A1&mode=design&t=T2uuBCz2Ned8Xngp-1)**
->>>****
+> ### 스터디_빈.진.우(Beenzinoo)
+> <br>
 
+>> **개발기간 : 2023.7.17 ~ 2023.08.08**
+>> - **[Figma Link](https://www.figma.com/file/ZB9OIXLqpcUhWNcic0Q0q3/exercise-tracker-app?type=design&node-id=0%3A1&mode=design&t=T2uuBCz2Ned8Xngp-1)**
+>> - **[배포사이트](https://yebinyun.github.io/exercise-tracker-app/)**
 <br>
 
 ## 프로젝트팀 소개
