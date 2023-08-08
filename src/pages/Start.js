@@ -9,7 +9,7 @@ const Start = () => {
             <div
                 className="flex items-end justify-center"
                 style={{
-                    backgroundImage: `url(${startBackground}')`, // 배경 이미지
+                    backgroundImage: `url(${startBackground})`, // 배경 이미지
                     backgroundPosition: "center", // 이미지 위치
                     backgroundSize: "cover", // 이미지 꽉차게
                     backgroundRepeat: 'no-repeat', // 이미지 반복 지정
