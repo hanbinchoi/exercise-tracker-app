@@ -54,7 +54,7 @@ function App() {
         <Route path="/myInfo" element={<MyInfo />}></Route>
         <Route path="/settings" element={<Settings />}></Route>
         <Route path="/Kakao/callback" element={<OAuth />}></Route>
-        <Route path="/Oauth" element={<Main />}></Route>
+        {/* <Route path="/Oauth" element={<Main />}></Route> */}
       </Routes>
       {isLogin === false ? (
         <KakaoUserInfo isLogin={isLogin} setIsLogin={setIsLogin} />
