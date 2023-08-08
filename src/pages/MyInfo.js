@@ -1,6 +1,7 @@
 // 내 정보 보기
 import React, { useState } from "react";
 import { Link } from "react-router-dom";
+import userImg from "../images/userImg.png";
 
 const MyInfo = () => {
   // 0부터 99까지의 숫자 배열 생성
@@ -63,7 +64,7 @@ const MyInfo = () => {
         <div
           className="w-[110px] h-[110px] rounded-full"
           style={{
-            backgroundImage: `url('/images/userImg.png')`, // 배경 이미지
+            backgroundImage: `url(${userImg})`, // 배경 이미지
             backgroundPosition: "center", // 이미지 위치
             backgroundSize: "cover", // 이미지 꽉차게
             backgroundRepeat: "no-repeat", // 이미지 반복 지정
