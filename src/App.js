@@ -32,6 +32,7 @@ function App() {
     "/Kakao/callback",
     "/Oauth",
   ];
+  console.log(isLogin);
   // 현재 경로가 showHeaderFooterPaths에 속하는지 확인하는 함수
   const showHeaderFooter = () =>
     showHeaderFooterPaths.includes(location.pathname);

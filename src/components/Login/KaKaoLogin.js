@@ -1,3 +1,4 @@
+import { useNavigate } from "react-router-dom";
 import KakaoUserInfo from "./KaKaoUserInfo";
 
 const SocialKAKAO = () => {
