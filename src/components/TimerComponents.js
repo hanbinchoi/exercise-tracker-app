@@ -1,7 +1,10 @@
 import React, { useEffect, useState, useRef } from "react";
+import play from "../images/iconamoon-player-play-duotone.png";
+import pause from "../images/iconamoon-player-pause-duotone.png";
+import stop from "../images/iconamoon-player-stop-duotone.png";
 
-function TimerComponents({setIsTimer}) {
-  const [isSetTime,setIsSetTime] = useState(true);
+function TimerComponents({ setIsTimer }) {
+  const [isSetTime, setIsSetTime] = useState(true);
 
   const [initialMin, setInitialMin] = useState(0);
   const [initialSec, setInitialSec] = useState(0);
@@ -45,10 +48,10 @@ function TimerComponents({setIsTimer}) {
   };
 
   const start = () => {
-    if(initialMin===0&&initialSec ===0) {
+    if (initialMin === 0 && initialSec === 0) {
       return alert("시간을 설정해주세요");
     }
-    
+
     if (!isStarting) {
       calTotalSec();
       timeFormat();
@@ -84,54 +87,67 @@ function TimerComponents({setIsTimer}) {
     setCount(0);
     setMinutes(0);
     setSeconds(0);
-    setIsSetTime(true)
+    setIsSetTime(true);
   };
 
   useEffect(timeFormat, [count]);
 
   return (
     <>
-      <div className=" w-80 h-[800px] flex flex-col justify-around items-center pt-16 border-2 border-[#E6E6E6]">
+      <div className="w-80 h-[800px] flex flex-col justify-around items-center pt-40 border-2 border-[#E6E6E6]">
+        {/* 타이머 시간 또는 입력칸 */}
+        <div className="w-64 h-64 flex justify-center items-center mt-10 border-4 border-[#ADDE7D] rounded-full text-7xl">
+          {isSetTime ? (
+              <div className="flex justify-center text-7xl">
+                <input
+                  className="w-20 text-center mx-3 border border-[rgba(119, 119, 119, 0.25)]"
+                  onChange={(e) => setInitialMin(e.target.value)}
+                  maxlength="2"
+                  placeholder="00"
+                />
+                <div className="">:</div>
+                <input
+                  className="w-20 text-center mx-3 border border-[rgba(119, 119, 119, 0.25)]"
+                  onChange={(e) => setInitialSec(e.target.value)}
+                  maxlength="2"
+                  placeholder="00"
+                />
+              </div>
+          ) : (
+            <div>
+              <p>
+                {minutes >= 10 ? minutes : `0${minutes}`} :{" "}
+                {seconds >= 10 ? seconds : `0${seconds}`}
+              </p>
+            </div>
+          )}
+        </div>
 
-      
-      {/* 타이머 시간 */}
-      <div className="w-80 h-[300px] flex justify-center items-center mt-10 border-4 border-[#66bb6a] rounded-full text-8xl">
-      <p>{minutes >= 10 ? minutes : `0${minutes}`} </p>
-      <p className="mx-3">:{" "}</p>
-      <p>{seconds >= 10 ? seconds : `0${seconds}`}</p>
-      </div>
-
-      {/* 타이머 입력칸 */}
-      {isSetTime?<div className="flex  justify-center">
-      <input
-        className="w-10 text-center mx-3 border-2 border-[#66bb6a]"
-        value={initialMin}
-        onChange={(e) => setInitialMin(e.target.value)}
-      />
-      <div className="text-2xl">:</div>
-      <input
-        className="w-10 text-center mx-3 border-2 border-[#66bb6a]"
-        value={initialSec}
-        onChange={(e) => setInitialSec(e.target.value)}
-      />
-      </div>:<p className="flex justify-center items-center">리셋을 누르면 입력창이 나타납니다.</p>}
-
-      {/* 타이머 실행 버튼 */}
-      <div className="w-80 flex justify-center mb-40  text-5xl text-[#66bb6a] ">
-      <button className="mr-5"type="button" onClick={start}>
-      ▶️
-      </button>
-      <button className="mx-1" type="button" onClick={pauseAndResume}>
-      ▶️II
-      </button>
-      <button className="ml-8" type="button" onClick={reset}>
-      ↩
-      </button>
-      </div>
-      
+        {/* 타이머 실행 버튼 */}
+        <div className="w-80 flex justify-center mb-40">
+          <button className="mr-5" type="button" onClick={start}>
+            <img
+              src={play}
+              alt="재생버튼"
+            />
+          </button>
+          <button className="mx-5" type="button" onClick={pauseAndResume}>
+            <img
+              src={pause}
+              alt="일시정지버튼"
+            />
+          </button>
+          <button className="ml-5" type="button" onClick={reset}>
+            <img
+              src={stop}
+              alt="새로고침"
+            />
+          </button>
+        </div>
       </div>
     </>
   );
 }
 
 export default TimerComponents;
+

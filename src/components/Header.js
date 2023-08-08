@@ -2,6 +2,8 @@ import React, { useState } from "react";
 import Category from "./Category";
 import "../index.css";
 import { Link } from "react-router-dom";
+import menuIcon from "../images/MenuIcon.png";
+import myInfoIcon from "../images/MyInfoIcon.png";
 
 const Header = () => {
   // 카테고리 보이기
@@ -18,7 +20,7 @@ const Header = () => {
       <button
         className="w-[40px] h-[40px]"
         style={{
-          backgroundImage: `url('/images/MenuIcon.png')`, // 배경 이미지
+          backgroundImage: `url(${menuIcon})`, // 배경 이미지
           backgroundPosition: "center", // 이미지 위치
           backgroundSize: "cover", // 이미지 꽉차게
           backgroundRepeat: "no-repeat", // 이미지 반복 지정
@@ -31,7 +33,7 @@ const Header = () => {
         <button
           className="w-[26px] h-[26px]"
           style={{
-            backgroundImage: `url('/images/MyInfoIcon.png')`, // 배경 이미지
+            backgroundImage: `url(${myInfoIcon})`, // 배경 이미지
             backgroundPosition: "center", // 이미지 위치
             backgroundSize: "cover", // 이미지 꽉차게
             backgroundRepeat: "no-repeat", // 이미지 반복 지정

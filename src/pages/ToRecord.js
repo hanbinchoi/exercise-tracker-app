@@ -23,7 +23,7 @@ const ToRecord = () => {
     setIsShowCalendar(!isShowCalendar);
   };
   return (
-    <main className="w-80 h-[800px] bg-[#ffffff] flex flex-col border-2 border-[#E6E6E6]">
+    <main className="w-80 h-[800px] bg-[#ffffff] flex flex-col border-2 border-[#E6E6E6] overflow-y-auto">
       <div className="px-2.5 mt-20 w-full flex flex-col">
         <ExerciseInputForm date={date} />
         <button
