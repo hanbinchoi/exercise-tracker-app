@@ -54,10 +54,10 @@ function App() {
         <Route path="/Kakao/callback" element={<Main />}></Route>
         <Route path="/Oauth" element={<Main />}></Route>
       </Routes>
-      {isLogin === false ? (
+      {/* {isLogin === false ? (
         <KakaoUserInfo isLogin={isLogin} setIsLogin={setIsLogin} />
-      ) : null}
-      <GoogleUserInfo />
+      ) : null} */}
+      {/* <GoogleUserInfo /> */}
       {/* 조건부로 Footer를 렌더링 */}
       {showHeaderFooter() && <Footer />}
     </div>
