@@ -28,11 +28,24 @@ const StopWatch = () => {
     setIsRunning(false);
   };
   return (
-    <div className=" w-80 h-[800px] flex flex-col justify-around items-center pt-16 border-2 border-[#E6E6E6]">
-      <div className="w-80 h-[300px] flex justify-center items-center border-4 border-[#A5D6A7] rounded-full text-8xl">{time.toFixed(2)}</div>
-      <div className="w-60 h-[100px]  flex justify-around items-center mb-20 text-6xl text-[#A5D6A7]">
-        <button onClick={handleStartPause}>{isRunning ? "ll" : "▶️"}</button>
-        <button onClick={handleReset}>↩</button>
+    <div className="w-80 h-[800px] flex flex-col justify-around items-center pt-40 border-2 border-[#E6E6E6]">
+      <div className="w-64 h-64 flex justify-center items-center mt-10 border-4 border-[#ADDE7D] rounded-full text-7xl">
+        {time.toFixed(2)}
+      </div>
+      
+      <div className="w-80 flex justify-center mb-40">
+        <button
+          className="mx-5"
+          onClick={handleStartPause}>{isRunning
+            ? <img src="/images/iconamoon-player-pause-duotone.png" alt="일시정지버튼" />
+            : <img src="/images/iconamoon-player-play-duotone.png" alt="재생버튼" />
+          }
+        </button>
+        <button
+          className="mx-5"
+          onClick={handleReset}>
+          <img src="/images/iconamoon-player-stop-duotone.png" alt="새로고침" />
+        </button>
       </div>
     </div>
   );
